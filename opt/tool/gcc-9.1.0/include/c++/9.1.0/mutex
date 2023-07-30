@@ -1,0 +1,47 @@
+// File: /opt/tool/gcc-9.1.0/include/c++/9.1.0/mutex
+
+// Line 76: range 000000000C69ED6E-000000000C69EE49
+void __cdecl std::__recursive_mutex_base::__recursive_mutex_base(std::__recursive_mutex_base *const this)
+{
+  if ( *(char *)(((unsigned __int64)this >> 3) + 0x7FFF8000) < 0
+    || *(_BYTE *)((((unsigned __int64)&this->_M_mutex.__align + 39) >> 3) + 0x7FFF8000) != 0
+    && (((unsigned __int8)this + 39) & 7) >= *(_BYTE *)((((unsigned __int64)&this->_M_mutex.__align + 39) >> 3)
+                                                      + 0x7FFF8000) )
+  {
+    __asan_report_store_n(this, 40LL);
+  }
+  *(_OWORD *)&this->_M_mutex.__data.__lock = 0uLL;
+  *((_OWORD *)&this->_M_mutex.__align + 1) = 0uLL;
+  this->_M_mutex.__data.__list.__next = 0LL;
+  if ( *(_BYTE *)(((unsigned __int64)(&this->_M_mutex.__align + 2) >> 3) + 0x7FFF8000) != 0
+    && *(_BYTE *)(((unsigned __int64)(&this->_M_mutex.__align + 2) >> 3) + 0x7FFF8000) <= 3 )
+  {
+    __asan_report_store4(&this->_M_mutex.__align + 2);
+  }
+  this->_M_mutex.__data.__kind = 1;
+};
+
+// Line 97: range 000000000C69EE4A-000000000C69EE64
+void __cdecl std::recursive_mutex::recursive_mutex(std::recursive_mutex *const this)
+{
+  std::__recursive_mutex_base::__recursive_mutex_base(this);
+};
+
+// Line 104: range 000000000C63544C-000000000C63547E
+void __cdecl std::recursive_mutex::lock(std::recursive_mutex *const this)
+{
+  int __e; // [rsp+1Ch] [rbp-4h]
+
+  __e = __gthread_recursive_mutex_lock(&this->_M_mutex);
+  if ( __e )
+  {
+    __asan_handle_no_return(this);
+    std::__throw_system_error(__e);
+  }
+};
+
+// Line 121: range 000000000C635480-000000000C63549A
+void __cdecl std::recursive_mutex::unlock(std::recursive_mutex *const this)
+{
+  __gthread_recursive_mutex_unlock(&this->_M_mutex);
+};

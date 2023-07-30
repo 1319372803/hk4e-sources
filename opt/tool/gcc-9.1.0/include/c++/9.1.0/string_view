@@ -1,0 +1,15 @@
+// File: /opt/tool/gcc-9.1.0/include/c++/9.1.0/string_view
+
+// Line 129: range 000000000CE474A8-000000000CE4751B
+void __cdecl std::string_view::basic_string_view(
+        std::string_view *const this,
+        const char *__str,
+        std::string_view::size_type __len)
+{
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+    __asan_report_store8();
+  this->_M_len = __len;
+  if ( *(_BYTE *)(((unsigned __int64)&this->_M_str >> 3) + 0x7FFF8000) )
+    __asan_report_store8();
+  this->_M_str = __str;
+};

@@ -1,0 +1,316 @@
+// File: /opt/tool/gcc-9.1.0/include/c++/9.1.0/sstream
+
+// Line 65: range 000000000C9CF5FC-000000000C9D0452
+void __fastcall std::stringbuf::~stringbuf(std::stringbuf *const this)
+{
+  std::locale *v1; // rbx
+  std::locale::_Impl *M_impl; // rdi
+
+  v1 = (std::locale *)this;
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store8();
+    goto LABEL_8;
+  }
+  *(_QWORD *)this = (char *)&`vtable for'std::stringbuf + 16;
+  this = (std::stringbuf *const)((char *)this + 72);
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+  {
+LABEL_8:
+    __asan_report_load8(this);
+    goto LABEL_9;
+  }
+  M_impl = v1[9]._M_impl;
+  if ( M_impl != (std::locale::_Impl *)&v1[11] )
+    operator delete(M_impl);
+  if ( *(_BYTE *)(((unsigned __int64)v1 >> 3) + 0x7FFF8000) )
+  {
+LABEL_9:
+    __asan_report_store8();
+    JUMPOUT(0xC9CF67FLL);
+  }
+  v1->_M_impl = (std::locale::_Impl *)((char *)&`vtable for'std::streambuf + 16);
+  std::locale::~locale(v1 + 7);
+};
+
+// Line 584: range 000000000C6018CB-000000000C60190A
+void __fastcall __noreturn Json::parseFromStream(
+        __int64 a1,
+        __int64 a2,
+        __int64 a3,
+        __int64 a4,
+        __int64 a5,
+        __int64 a6,
+        __int64 a7,
+        __int64 a8,
+        __int64 a9,
+        __int64 a10,
+        __int64 a11,
+        __int64 a12,
+        __int64 a13,
+        __int64 a14,
+        __int64 a15,
+        __int64 a16,
+        __int64 a17,
+        __int64 a18,
+        __int64 a19,
+        __int64 a20,
+        __int64 a21,
+        __int64 a22,
+        __int64 a23,
+        __int64 a24,
+        __int64 a25,
+        __int64 a26,
+        __int64 a27,
+        __int64 a28,
+        __int64 a29,
+        __int64 a30,
+        __int64 a31,
+        __int64 a32,
+        __int64 a33,
+        __int64 a34,
+        __int64 a35,
+        __int64 a36)
+{
+  struct _Unwind_Exception *v36; // rbp
+  std::ios_base *v37; // r12
+  std::stringbuf *v38; // r14
+  __int64 v39; // r15
+  __int64 v40; // rax
+
+  std::stringbuf::~stringbuf(v38);
+  v40 = *(_QWORD *)(v39 - 24);
+  a22 = v39;
+  *(__int64 *)((char *)&a22 + v40) = a7;
+  a36 = (__int64)&`vtable for'std::ios + 16;
+  std::ios_base::~ios_base(v37);
+  _Unwind_Resume(v36);
+};
+
+// Line 584: range 000000000C5FEFC4-000000000C5FF018
+void __fastcall __noreturn mysqlpp::SQLTypeAdapter::SQLTypeAdapter(
+        __int64 a1,
+        __int64 a2,
+        __int64 a3,
+        __int64 a4,
+        __int64 a5,
+        __int64 a6,
+        __int64 a7,
+        __int64 a8,
+        __int64 a9,
+        __int64 a10,
+        __int64 a11,
+        __int64 a12,
+        __int64 a13,
+        __int64 a14,
+        __int64 a15,
+        void *a16,
+        __int64 a17,
+        __int64 a18,
+        __int64 a19,
+        __int64 a20,
+        __int64 a21,
+        __int64 a22,
+        __int64 a23,
+        __int64 a24,
+        __int64 a25,
+        __int64 a26,
+        __int64 a27,
+        __int64 a28,
+        __int64 a29,
+        __int64 a30,
+        __int64 a31,
+        __int64 a32,
+        __int64 a33,
+        __int64 a34,
+        __int64 a35,
+        __int64 a36,
+        __int64 a37,
+        __int64 a38,
+        __int64 a39,
+        __int64 a40,
+        __int64 a41,
+        __int64 a42,
+        __int64 a43,
+        __int64 a44,
+        __int64 a45,
+        __int64 a46,
+        __int64 a47,
+        __int64 a48,
+        __int64 a49,
+        __int64 a50,
+        __int64 a51,
+        __int64 a52,
+        __int64 a53,
+        __int64 a54,
+        __int64 a55,
+        __int64 a56,
+        __int64 a57,
+        __int64 a58,
+        __int64 a59,
+        __int64 a60,
+        __int64 a61,
+        __int64 a62,
+        __int64 a63)
+{
+  void *v65; // rbx
+  mysqlpp::RefCountedPointer<mysqlpp::SQLBuffer,mysqlpp::RefCountedPointerDestroyer<mysqlpp::SQLBuffer> > *v66; // rbp
+  struct _Unwind_Exception *v67; // r12
+  std::ios_base *v68; // r13
+  std::stringbuf *v69; // r14
+  __int64 v70; // r15
+  __int64 v71; // rax
+
+  std::stringbuf::~stringbuf(v69);
+  v71 = *(_QWORD *)(v70 - 24);
+  a65 = v70;
+  *(__int64 *)((char *)&a65 + v71) = a8;
+  STACK[0x260] = a7 + 16;
+  std::ios_base::~ios_base(v68);
+  if ( a16 != v65 )
+    operator delete(a16);
+  mysqlpp::RefCountedPointer<mysqlpp::SQLBuffer,mysqlpp::RefCountedPointerDestroyer<mysqlpp::SQLBuffer>>::~RefCountedPointer(v66);
+  _Unwind_Resume(v67);
+};
+
+// Line 584: range 000000000C5FF252-000000000C5FF2A6
+void __fastcall __noreturn mysqlpp::SQLTypeAdapter::SQLTypeAdapter(
+        __int64 a1,
+        __int64 a2,
+        __int64 a3,
+        __int64 a4,
+        __int64 a5,
+        __int64 a6,
+        __int64 a7,
+        __int64 a8,
+        __int64 a9,
+        __int64 a10,
+        __int64 a11,
+        __int64 a12,
+        __int64 a13,
+        __int64 a14,
+        __int64 a15,
+        void *a16,
+        __int64 a17,
+        __int64 a18,
+        __int64 a19,
+        __int64 a20,
+        __int64 a21,
+        __int64 a22,
+        __int64 a23,
+        __int64 a24,
+        __int64 a25,
+        __int64 a26,
+        __int64 a27,
+        __int64 a28,
+        __int64 a29,
+        __int64 a30,
+        __int64 a31,
+        __int64 a32,
+        __int64 a33,
+        __int64 a34,
+        __int64 a35,
+        __int64 a36,
+        __int64 a37,
+        __int64 a38,
+        __int64 a39,
+        __int64 a40,
+        __int64 a41,
+        __int64 a42,
+        __int64 a43,
+        __int64 a44,
+        __int64 a45,
+        __int64 a46,
+        __int64 a47,
+        __int64 a48,
+        __int64 a49,
+        __int64 a50,
+        __int64 a51,
+        __int64 a52,
+        __int64 a53,
+        __int64 a54,
+        __int64 a55,
+        __int64 a56,
+        __int64 a57,
+        __int64 a58,
+        __int64 a59,
+        __int64 a60,
+        __int64 a61,
+        __int64 a62,
+        __int64 a63)
+{
+  void *v65; // rbx
+  mysqlpp::RefCountedPointer<mysqlpp::SQLBuffer,mysqlpp::RefCountedPointerDestroyer<mysqlpp::SQLBuffer> > *v66; // rbp
+  struct _Unwind_Exception *v67; // r12
+  std::ios_base *v68; // r13
+  std::stringbuf *v69; // r14
+  __int64 v70; // r15
+  __int64 v71; // rax
+
+  std::stringbuf::~stringbuf(v69);
+  v71 = *(_QWORD *)(v70 - 24);
+  a65 = v70;
+  *(__int64 *)((char *)&a65 + v71) = a8;
+  STACK[0x260] = a7 + 16;
+  std::ios_base::~ios_base(v68);
+  if ( a16 != v65 )
+    operator delete(a16);
+  mysqlpp::RefCountedPointer<mysqlpp::SQLBuffer,mysqlpp::RefCountedPointerDestroyer<mysqlpp::SQLBuffer>>::~RefCountedPointer(v66);
+  _Unwind_Resume(v67);
+};
+
+// Line 620: range 000000000C5FFE7A-000000000C5FFEBD
+void __fastcall __noreturn mysqlpp::SQLStream::SQLStream(
+        __int64 a1,
+        __int64 a2,
+        __int64 a3,
+        __int64 a4,
+        __int64 a5,
+        __int64 a6,
+        __int64 a7,
+        void *a8)
+{
+  _QWORD *v8; // rbx
+  struct _Unwind_Exception *v9; // rbp
+  void *v10; // r12
+  std::ios_base *v11; // r13
+  std::stringbuf *v12; // r14
+
+  std::stringbuf::~stringbuf(v12);
+  *v8 = &unk_1E6EFAC8;
+  v8[15] = (char *)&unk_1E6EFAC8 + 40;
+  if ( a8 != v10 )
+    operator delete(a8);
+  v8[15] = (char *)&`vtable for'std::ios + 16;
+  std::ios_base::~ios_base(v11);
+  _Unwind_Resume(v9);
+};
+
+// Line 620: range 000000000C5FFF34-000000000C5FFF61
+void __fastcall __noreturn mysqlpp::SQLStream::SQLStream(
+        __int64 a1,
+        __int64 a2,
+        __int64 a3,
+        __int64 a4,
+        __int64 a5,
+        __int64 a6,
+        __int64 a7,
+        void *a8)
+{
+  _QWORD *v8; // rbx
+  __int64 v9; // rbp
+  struct _Unwind_Exception *v10; // r12
+  void *v11; // r13
+  std::stringbuf *v12; // r14
+  __int64 v13; // rax
+  __int64 v14; // rdx
+
+  std::stringbuf::~stringbuf(v12);
+  v13 = *(_QWORD *)(v9 + 16);
+  v14 = *(_QWORD *)(v9 + 24);
+  *v8 = v13;
+  *(_QWORD *)((char *)v8 + *(_QWORD *)(v13 - 24)) = v14;
+  if ( a8 != v11 )
+    operator delete(a8);
+  _Unwind_Resume(v10);
+};

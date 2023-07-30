@@ -1,0 +1,59 @@
+// File: /opt/tool/gcc-9.1.0/include/c++/9.1.0/typeindex
+
+// Line 58: range 000000000F7762F0-000000000F77635C
+bool __cdecl std::type_index::operator==(const std::type_index *const this, const std::type_index *__rhs)
+{
+  const std::type_info *M_target; // rdx
+
+  if ( *(_BYTE *)(((unsigned __int64)__rhs >> 3) + 0x7FFF8000) )
+    __asan_report_load8(__rhs);
+  M_target = __rhs->_M_target;
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+    __asan_report_load8(this);
+  return std::type_info::operator==(this->_M_target, M_target);
+};
+
+// Line 66: range 000000000CDFCF18-000000000CDFCF84
+bool __cdecl std::type_index::operator<(const std::type_index *const this, const std::type_index *__rhs)
+{
+  const std::type_info *M_target; // rax
+
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+    __asan_report_load8(this);
+  M_target = this->_M_target;
+  if ( *(_BYTE *)(((unsigned __int64)__rhs >> 3) + 0x7FFF8000) )
+    M_target = (const std::type_info *)__asan_report_load8(__rhs);
+  return std::type_info::before(M_target, __rhs->_M_target);
+};
+
+// Line 82: range 000000000F77635E-000000000F77639B
+std::size_t __cdecl std::type_index::hash_code(const std::type_index *const this)
+{
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+    __asan_report_load8(this);
+  return std::type_info::hash_code(this->_M_target);
+};
+
+// Line 86: range 000000000CDFCF86-000000000CDFCFC3
+const char *__cdecl std::type_index::name(const std::type_index *const this)
+{
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+    __asan_report_load8(this);
+  return std::type_info::name(this->_M_target);
+};
+
+// Line 103: range 000000000F77639C-000000000F7763B9
+std::size_t __cdecl std::hash<std::type_index>::operator()(
+        const std::hash<std::type_index> *const this,
+        const std::type_index *__ti)
+{
+  return std::type_index::hash_code(__ti);
+};
+
+// Line 920: range 000000000CDFCED8-000000000CDFCF16
+void __cdecl std::type_index::type_index(std::type_index *const this, const std::type_info *__rhs)
+{
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+    __asan_report_store8();
+  this->_M_target = __rhs;
+};

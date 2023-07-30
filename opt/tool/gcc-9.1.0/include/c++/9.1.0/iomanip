@@ -1,0 +1,7 @@
+// File: /opt/tool/gcc-9.1.0/include/c++/9.1.0/iomanip
+
+// Line 146: range 000000000CDFC4A6-000000000CDFC4B1
+std::_Setprecision __cdecl std::setprecision(int __n)
+{
+  return (std::_Setprecision)__n;
+};

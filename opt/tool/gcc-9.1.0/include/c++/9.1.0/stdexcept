@@ -1,0 +1,39 @@
+// File: /opt/tool/gcc-9.1.0/include/c++/9.1.0/stdexcept
+
+// Line 174: range 000000000D101A9A-000000000D101AF2
+void __cdecl std::invalid_argument::invalid_argument(
+        std::invalid_argument *const this,
+        const std::invalid_argument *a2)
+{
+  char *v2; // rdx
+
+  std::logic_error::logic_error(this, a2);
+  v2 = (char *)&`vtable for'std::invalid_argument + 16;
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+    __asan_report_store8();
+  *(_QWORD *)this = v2;
+};
+
+// Line 190: range 000000000C66F974-000000000C66F9CC
+void __cdecl std::length_error::length_error(std::length_error *const this, const std::length_error *a2)
+{
+  char *v2; // rdx
+
+  std::logic_error::logic_error(this, a2);
+  v2 = (char *)&`vtable for'std::length_error + 16;
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+    __asan_report_store8();
+  *(_QWORD *)this = v2;
+};
+
+// Line 206: range 000000000C66F9CE-000000000C66FA26
+void __cdecl std::out_of_range::out_of_range(std::out_of_range *const this, const std::out_of_range *a2)
+{
+  char *v2; // rdx
+
+  std::logic_error::logic_error(this, a2);
+  v2 = (char *)&`vtable for'std::out_of_range + 16;
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+    __asan_report_store8();
+  *(_QWORD *)this = v2;
+};

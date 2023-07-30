@@ -1,0 +1,2232 @@
+// File: /opt/tool/gcc-9.1.0/include/c++/9.1.0/optional
+
+// Line 74: range 000000000C65B40C-000000000C65B426
+void __cdecl std::_Optional_payload_base<common::tools::PTree>::~_Optional_payload_base(
+        std::_Optional_payload_base<common::tools::PTree> *const this)
+{
+  std::_Optional_payload_base<common::tools::PTree>::_Storage<common::tools::PTree,false>::~_Storage(&this->_M_payload);
+};
+
+// Line 77: range 000000001306A244-000000001306A2D7
+void __fastcall std::_Optional_payload_base<bool>::_Storage<bool,true>::_Storage<bool>(
+        unsigned __int64 this,
+        std::remove_reference<bool>::type *a2,
+        bool *a3,
+        bool *a4)
+{
+  bool *v4; // rax
+  __int8 *v5; // rdx
+  __int8 v6; // cl
+
+  v4 = std::forward<bool>(a2);
+  v5 = (__int8 *)v4;
+  if ( *(_BYTE *)(((unsigned __int64)v4 >> 3) + 0x7FFF8000) != 0
+    && ((unsigned __int8)v4 & 7) >= *(_BYTE *)(((unsigned __int64)v4 >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_load1(v4);
+  }
+  v6 = *v5;
+  if ( *(_BYTE *)((this >> 3) + 0x7FFF8000) != 0 && (char)(this & 7) >= *(_BYTE *)((this >> 3) + 0x7FFF8000) )
+    __asan_report_store1(this);
+  *(_BYTE *)this = v6;
+};
+
+// Line 84: range 000000000CDF976A-000000000CDF97B7
+void __cdecl std::bad_optional_access::bad_optional_access(std::bad_optional_access *const this)
+{
+  __int64 *v1; // rdx
+
+  std::exception::exception((std::exception *const)this);
+  v1 = &`vtable for'std::bad_optional_access + 2;
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+    __asan_report_store8();
+  *this = (std::bad_optional_access)v1;
+};
+
+// Line 86: range 000000000CDF97B8-000000000CDF97C8
+const char *__cdecl std::bad_optional_access::what(const std::bad_optional_access *const this)
+{
+  return "bad optional access";
+};
+
+// Line 89: range 000000000D49379E-000000000D4937C8
+void __cdecl std::bad_optional_access::~bad_optional_access(std::bad_optional_access *const this)
+{
+  std::bad_optional_access::~bad_optional_access(this);
+  operator delete(this, 8uLL);
+};
+
+// Line 89: range 000000000D493750-000000000D49379D
+void __cdecl std::bad_optional_access::~bad_optional_access(std::bad_optional_access *const this)
+{
+  __int64 *v1; // rdx
+
+  v1 = &`vtable for'std::bad_optional_access + 2;
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+    __asan_report_store8();
+  *this = (std::bad_optional_access)v1;
+  std::exception::~exception((std::exception *)this);
+};
+
+// Line 99: range 000000000CDF97C9-000000000CDF9803
+void __cdecl __noreturn std::__throw_bad_optional_access()
+{
+  std::bad_optional_access *exception; // rdi
+
+  exception = (std::bad_optional_access *)__cxa_allocate_exception(8uLL);
+  std::bad_optional_access::bad_optional_access(exception);
+  __asan_handle_no_return(exception);
+  _cxa_throw(
+    exception,
+    (struct type_info *)&`typeinfo for'std::bad_optional_access,
+    (void (__fastcall *)(void *))std::bad_optional_access::~bad_optional_access);
+};
+
+// Line 108: range 000000000F78B986-000000000F78B9DB
+void __cdecl std::_Optional_payload_base<WorktopConfig>::_Optional_payload_base(
+        std::_Optional_payload_base<WorktopConfig> *const this)
+{
+  std::_Optional_payload_base<WorktopConfig>::_Storage<WorktopConfig,false>::_Storage(&this->_M_payload);
+  if ( *(char *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_store1(&this->_M_engaged);
+  this->_M_engaged = 0;
+};
+
+// Line 108: range 0000000012EE71BC-0000000012EE7216
+void __cdecl std::_Optional_payload_base<bool>::_Optional_payload_base(std::_Optional_payload_base<bool> *const this)
+{
+  std::_Optional_payload_base<bool>::_Storage<bool,true>::_Storage(&this->_M_payload);
+  if ( *(_BYTE *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) != 0
+    && (((unsigned __int8)this + 1) & 7) >= *(_BYTE *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store1(&this->_M_engaged);
+  }
+  this->_M_engaged = 0;
+};
+
+// Line 108: range 000000000CE0C968-000000000CE0C9BD
+void __cdecl std::_Optional_payload_base<std::unordered_set<unsigned int>>::_Optional_payload_base(
+        std::_Optional_payload_base<std::unordered_set<unsigned int> > *const this)
+{
+  std::_Optional_payload_base<std::unordered_set<unsigned int>>::_Storage<std::unordered_set<unsigned int>,false>::_Storage(&this->_M_payload);
+  if ( *(char *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_store1(&this->_M_engaged);
+  this->_M_engaged = 0;
+};
+
+// Line 108: range 000000000CE0C9BE-000000000CE0C9D8
+void __cdecl std::_Optional_payload_base<std::unordered_set<unsigned int>>::~_Optional_payload_base(
+        std::_Optional_payload_base<std::unordered_set<unsigned int> > *const this)
+{
+  std::_Optional_payload_base<std::unordered_set<unsigned int>>::_Storage<std::unordered_set<unsigned int>,false>::~_Storage(&this->_M_payload);
+};
+
+// Line 108: range 0000000012F0A42E-0000000012F0A483
+void __cdecl std::_Optional_payload_base<std::vector<unsigned int>>::_Optional_payload_base(
+        std::_Optional_payload_base<std::vector<unsigned int> > *const this)
+{
+  std::_Optional_payload_base<std::vector<unsigned int>>::_Storage<std::vector<unsigned int>,false>::_Storage(&this->_M_payload);
+  if ( *(char *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_store1(&this->_M_engaged);
+  this->_M_engaged = 0;
+};
+
+// Line 108: range 0000000012F0A740-0000000012F0A79A
+void __cdecl std::_Optional_payload_base<unsigned int>::_Optional_payload_base(
+        std::_Optional_payload_base<unsigned int> *const this)
+{
+  std::_Optional_payload_base<unsigned int>::_Storage<unsigned int,true>::_Storage((std::_Optional_payload_base<unsigned int>::_Storage<unsigned int,true> *const)this);
+  if ( *(_BYTE *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) != 0
+    && (((unsigned __int8)this + 4) & 7) >= *(_BYTE *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store1(&this->_M_engaged);
+  }
+  this->_M_engaged = 0;
+};
+
+// Line 109: range 000000000F78B9DC-000000000F78B9F6
+void __cdecl std::_Optional_payload_base<WorktopConfig>::~_Optional_payload_base(
+        std::_Optional_payload_base<WorktopConfig> *const this)
+{
+  std::_Optional_payload_base<WorktopConfig>::_Storage<WorktopConfig,false>::~_Storage(&this->_M_payload);
+};
+
+// Line 109: range 000000000F785E70-000000000F785E8A
+void __cdecl std::_Optional_payload_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>::~_Optional_payload_base(
+        std::_Optional_payload_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > > *const this)
+{
+  std::_Optional_payload_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>::_Storage<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,false>::~_Storage(&this->_M_payload);
+};
+
+// Line 113: range 000000001306A2D8-000000001306A3F2
+void __fastcall std::_Optional_payload_base<bool>::_Optional_payload_base<bool>(
+        std::_Optional_payload_base<bool> *const this,
+        std::remove_reference<bool>::type *__tag,
+        bool *a3,
+        bool *a4,
+        __int64 a5,
+        __int64 a6,
+        char a7)
+{
+  unsigned __int64 v7; // rbx
+  __int64 v8; // rax
+  unsigned __int64 v9; // r12
+  bool *v10; // rax
+  bool *v11; // rdx
+  bool *v12; // rcx
+  char v13[96]; // [rsp+10h] [rbp-60h] BYREF
+
+  v7 = (unsigned __int64)v13;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v8 = __asan_stack_malloc_0(64LL);
+    if ( v8 )
+      v7 = v8;
+  }
+  *(_QWORD *)v7 = 1102416563LL;
+  *(_QWORD *)(v7 + 8) = "1 32 1 9 __tag:113";
+  *(_QWORD *)(v7 + 16) = std::_Optional_payload_base<bool>::_Optional_payload_base<bool>;
+  v9 = v7 >> 3;
+  *(_DWORD *)(v9 + 2147450880) = -235802127;
+  *(_DWORD *)(v9 + 2147450884) = -202116351;
+  *(_BYTE *)(v7 + 32) = a7;
+  v10 = std::forward<bool>(__tag);
+  std::_Optional_payload_base<bool>::_Storage<bool,true>::_Storage<bool>((unsigned __int64)this, v10, v11, v12);
+  if ( *(_BYTE *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) != 0
+    && (((unsigned __int8)this + 1) & 7) >= *(_BYTE *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store1(&this->_M_engaged);
+  }
+  this->_M_engaged = 1;
+  if ( v13 == (char *)v7 )
+  {
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v7 = 1172321806LL;
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 113: range 00000000149E607A-00000000149E618F
+void __fastcall std::_Optional_payload_base<std::unordered_set<unsigned int>>::_Optional_payload_base<std::unordered_set<unsigned int> const&>(
+        std::_Optional_payload_base<std::unordered_set<unsigned int> > *const this,
+        std::remove_reference<const std::unordered_set<unsigned int>&>::type *__tag,
+        const std::unordered_set<unsigned int> *a3,
+        const std::unordered_set<unsigned int> *a4,
+        __int64 a5,
+        __int64 a6,
+        char a7)
+{
+  unsigned __int64 v7; // rbx
+  __int64 v8; // rax
+  unsigned __int64 v9; // r12
+  unsigned __int8 v10; // al
+  const std::unordered_set<unsigned int> *v11; // rdx
+  const std::unordered_set<unsigned int> *v12; // rcx
+  char v13[96]; // [rsp+10h] [rbp-60h] BYREF
+
+  v7 = (unsigned __int64)v13;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v8 = __asan_stack_malloc_0(64LL);
+    if ( v8 )
+      v7 = v8;
+  }
+  *(_QWORD *)v7 = 1102416563LL;
+  *(_QWORD *)(v7 + 8) = "1 32 1 9 __tag:113";
+  *(_QWORD *)(v7 + 16) = std::_Optional_payload_base<std::unordered_set<unsigned int>>::_Optional_payload_base<std::unordered_set<unsigned int> const&>;
+  v9 = v7 >> 3;
+  *(_DWORD *)(v9 + 2147450880) = -235802127;
+  *(_DWORD *)(v9 + 2147450884) = -202116351;
+  *(_BYTE *)(v7 + 32) = a7;
+  v10 = (unsigned __int8)std::forward<std::unordered_set<unsigned int> const&>(__tag);
+  std::_Optional_payload_base<std::unordered_set<unsigned int>>::_Storage<std::unordered_set<unsigned int>,false>::_Storage<std::unordered_set<unsigned int> const&>(
+    &this->_M_payload,
+    (std::in_place_t)v10,
+    v11,
+    v12);
+  if ( *(char *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_store1(&this->_M_engaged);
+  this->_M_engaged = 1;
+  if ( v13 == (char *)v7 )
+  {
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v7 = 1172321806LL;
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 113: range 00000000130AED10-00000000130AEE25
+void __fastcall std::_Optional_payload_base<std::vector<unsigned int>>::_Optional_payload_base<std::vector<unsigned int>>(
+        std::_Optional_payload_base<std::vector<unsigned int> > *const this,
+        std::remove_reference<std::vector<unsigned int> >::type *__tag,
+        std::vector<unsigned int> *a3,
+        std::vector<unsigned int> *a4,
+        __int64 a5,
+        __int64 a6,
+        char a7)
+{
+  unsigned __int64 v7; // rbx
+  __int64 v8; // rax
+  unsigned __int64 v9; // r12
+  unsigned __int8 v10; // al
+  std::vector<unsigned int> *v11; // rdx
+  std::vector<unsigned int> *v12; // rcx
+  char v13[96]; // [rsp+10h] [rbp-60h] BYREF
+
+  v7 = (unsigned __int64)v13;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v8 = __asan_stack_malloc_0(64LL);
+    if ( v8 )
+      v7 = v8;
+  }
+  *(_QWORD *)v7 = 1102416563LL;
+  *(_QWORD *)(v7 + 8) = "1 32 1 9 __tag:113";
+  *(_QWORD *)(v7 + 16) = std::_Optional_payload_base<std::vector<unsigned int>>::_Optional_payload_base<std::vector<unsigned int>>;
+  v9 = v7 >> 3;
+  *(_DWORD *)(v9 + 2147450880) = -235802127;
+  *(_DWORD *)(v9 + 2147450884) = -202116351;
+  *(_BYTE *)(v7 + 32) = a7;
+  v10 = (unsigned __int8)std::forward<std::vector<unsigned int>>(__tag);
+  std::_Optional_payload_base<std::vector<unsigned int>>::_Storage<std::vector<unsigned int>,false>::_Storage<std::vector<unsigned int>>(
+    &this->_M_payload,
+    (std::in_place_t)v10,
+    v11,
+    v12);
+  if ( *(char *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_store1(&this->_M_engaged);
+  this->_M_engaged = 1;
+  if ( v13 == (char *)v7 )
+  {
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v7 = 1172321806LL;
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 113: range 00000000130AEEC0-00000000130AEFDA
+void __fastcall std::_Optional_payload_base<unsigned int>::_Optional_payload_base<unsigned int &>(
+        std::_Optional_payload_base<unsigned int> *const this,
+        std::remove_reference<unsigned int&>::type *__tag,
+        unsigned int *a3,
+        unsigned int *a4,
+        __int64 a5,
+        __int64 a6,
+        char a7)
+{
+  unsigned __int64 v7; // rbx
+  __int64 v8; // rax
+  unsigned __int64 v9; // r12
+  unsigned __int8 v10; // al
+  unsigned int *v11; // rdx
+  unsigned int *v12; // rcx
+  char v13[96]; // [rsp+10h] [rbp-60h] BYREF
+
+  v7 = (unsigned __int64)v13;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v8 = __asan_stack_malloc_0(64LL);
+    if ( v8 )
+      v7 = v8;
+  }
+  *(_QWORD *)v7 = 1102416563LL;
+  *(_QWORD *)(v7 + 8) = "1 32 1 9 __tag:113";
+  *(_QWORD *)(v7 + 16) = std::_Optional_payload_base<unsigned int>::_Optional_payload_base<unsigned int &>;
+  v9 = v7 >> 3;
+  *(_DWORD *)(v9 + 2147450880) = -235802127;
+  *(_DWORD *)(v9 + 2147450884) = -202116351;
+  *(_BYTE *)(v7 + 32) = a7;
+  v10 = (unsigned __int8)std::forward<unsigned int &>(__tag);
+  std::_Optional_payload_base<unsigned int>::_Storage<unsigned int,true>::_Storage<unsigned int &>(
+    (std::_Optional_payload_base<unsigned int>::_Storage<unsigned int,true> *const)this,
+    (std::in_place_t)v10,
+    v11,
+    v12);
+  if ( *(_BYTE *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) != 0
+    && (((unsigned __int8)this + 4) & 7) >= *(_BYTE *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store1(&this->_M_engaged);
+  }
+  this->_M_engaged = 1;
+  if ( v13 == (char *)v7 )
+  {
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v7 = 1172321806LL;
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 113: range 00000000130AF076-00000000130AF190
+void __fastcall std::_Optional_payload_base<unsigned int>::_Optional_payload_base<unsigned int const&>(
+        std::_Optional_payload_base<unsigned int> *const this,
+        std::remove_reference<unsigned int const&>::type *__tag,
+        const unsigned int *a3,
+        const unsigned int *a4,
+        __int64 a5,
+        __int64 a6,
+        char a7)
+{
+  unsigned __int64 v7; // rbx
+  __int64 v8; // rax
+  unsigned __int64 v9; // r12
+  unsigned __int8 v10; // al
+  const unsigned int *v11; // rdx
+  const unsigned int *v12; // rcx
+  char v13[96]; // [rsp+10h] [rbp-60h] BYREF
+
+  v7 = (unsigned __int64)v13;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v8 = __asan_stack_malloc_0(64LL);
+    if ( v8 )
+      v7 = v8;
+  }
+  *(_QWORD *)v7 = 1102416563LL;
+  *(_QWORD *)(v7 + 8) = "1 32 1 9 __tag:113";
+  *(_QWORD *)(v7 + 16) = std::_Optional_payload_base<unsigned int>::_Optional_payload_base<unsigned int const&>;
+  v9 = v7 >> 3;
+  *(_DWORD *)(v9 + 2147450880) = -235802127;
+  *(_DWORD *)(v9 + 2147450884) = -202116351;
+  *(_BYTE *)(v7 + 32) = a7;
+  v10 = (unsigned __int8)std::forward<unsigned int const&>(__tag);
+  std::_Optional_payload_base<unsigned int>::_Storage<unsigned int,true>::_Storage<unsigned int const&>(
+    (std::_Optional_payload_base<unsigned int>::_Storage<unsigned int,true> *const)this,
+    (std::in_place_t)v10,
+    v11,
+    v12);
+  if ( *(_BYTE *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) != 0
+    && (((unsigned __int8)this + 4) & 7) >= *(_BYTE *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store1(&this->_M_engaged);
+  }
+  this->_M_engaged = 1;
+  if ( v13 == (char *)v7 )
+  {
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v7 = 1172321806LL;
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 113: range 0000000013E33C5A-0000000013E33D74
+void __fastcall std::_Optional_payload_base<unsigned int>::_Optional_payload_base<unsigned int>(
+        std::_Optional_payload_base<unsigned int> *const this,
+        std::remove_reference<unsigned int>::type *__tag,
+        unsigned int *a3,
+        unsigned int *a4,
+        __int64 a5,
+        __int64 a6,
+        char a7)
+{
+  unsigned __int64 v7; // rbx
+  __int64 v8; // rax
+  unsigned __int64 v9; // r12
+  unsigned __int8 v10; // al
+  unsigned int *v11; // rdx
+  unsigned int *v12; // rcx
+  char v13[96]; // [rsp+10h] [rbp-60h] BYREF
+
+  v7 = (unsigned __int64)v13;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v8 = __asan_stack_malloc_0(64LL);
+    if ( v8 )
+      v7 = v8;
+  }
+  *(_QWORD *)v7 = 1102416563LL;
+  *(_QWORD *)(v7 + 8) = "1 32 1 9 __tag:113";
+  *(_QWORD *)(v7 + 16) = std::_Optional_payload_base<unsigned int>::_Optional_payload_base<unsigned int>;
+  v9 = v7 >> 3;
+  *(_DWORD *)(v9 + 2147450880) = -235802127;
+  *(_DWORD *)(v9 + 2147450884) = -202116351;
+  *(_BYTE *)(v7 + 32) = a7;
+  v10 = (unsigned __int8)std::forward<unsigned int>(__tag);
+  std::_Optional_payload_base<unsigned int>::_Storage<unsigned int,true>::_Storage<unsigned int>(
+    (std::_Optional_payload_base<unsigned int>::_Storage<unsigned int,true> *const)this,
+    (std::in_place_t)v10,
+    v11,
+    v12);
+  if ( *(_BYTE *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) != 0
+    && (((unsigned __int8)this + 4) & 7) >= *(_BYTE *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store1(&this->_M_engaged);
+  }
+  this->_M_engaged = 1;
+  if ( v13 == (char *)v7 )
+  {
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v7 = 1172321806LL;
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 129: range 000000000F9E5C4C-000000000F9E5D2B
+void __cdecl std::_Optional_payload_base<WorktopConfig>::_Optional_payload_base(
+        std::_Optional_payload_base<WorktopConfig> *const this,
+        bool __engaged,
+        const std::_Optional_payload_base<WorktopConfig> *__other)
+{
+  const WorktopConfig *v3; // rdx
+
+  std::_Optional_payload_base<WorktopConfig>::_Storage<WorktopConfig,false>::_Storage(&this->_M_payload);
+  if ( *(char *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_store1(&this->_M_engaged);
+  this->_M_engaged = 0;
+  if ( *(char *)(((unsigned __int64)&__other->_M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_load1(&__other->_M_engaged);
+  if ( __other->_M_engaged )
+  {
+    v3 = std::_Optional_payload_base<WorktopConfig>::_M_get(__other);
+    std::_Optional_payload_base<WorktopConfig>::_M_construct<WorktopConfig const&>(this, v3, v3);
+  }
+};
+
+// Line 139: range 000000000D4114C2-000000000D411585
+void __cdecl std::_Optional_payload_base<std::unordered_set<unsigned int>>::_Optional_payload_base(
+        std::_Optional_payload_base<std::unordered_set<unsigned int> > *const this,
+        bool __engaged,
+        std::_Optional_payload_base<std::unordered_set<unsigned int> > *__other)
+{
+  std::unordered_set<unsigned int> *v3; // rax
+  std::unordered_set<unsigned int> *v4; // rdx
+
+  std::_Optional_payload_base<std::unordered_set<unsigned int>>::_Storage<std::unordered_set<unsigned int>,false>::_Storage(&this->_M_payload);
+  if ( *(char *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_store1(&this->_M_engaged);
+  this->_M_engaged = 0;
+  if ( *(char *)(((unsigned __int64)&__other->_M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_load1(&__other->_M_engaged);
+  if ( __other->_M_engaged )
+  {
+    v3 = std::_Optional_payload_base<std::unordered_set<unsigned int>>::_M_get(__other);
+    v4 = std::move<std::unordered_set<unsigned int> &>(v3);
+    std::_Optional_payload_base<std::unordered_set<unsigned int>>::_M_construct<std::unordered_set<unsigned int>>(
+      this,
+      v4,
+      v4);
+  }
+};
+
+// Line 175: range 000000000CF42BE4-000000000CF42C97
+void __fastcall std::_Optional_base_impl<std::unordered_set<unsigned int>,std::_Optional_base<std::unordered_set<unsigned int>,false,false>>::_M_construct<std::unordered_set<unsigned int>&>(
+        std::_Optional_base_impl<std::unordered_set<unsigned int>,std::_Optional_base<std::unordered_set<unsigned int>,false,false> > *const this,
+        std::unordered_set<unsigned int> *a2,
+        std::unordered_set<unsigned int> *__args_0)
+{
+  std::unordered_set<unsigned int> *v3; // r13
+  std::_Optional_payload_base<std::unordered_set<unsigned int> >::_Storage<std::unordered_set<unsigned int>,false> *v4; // rax
+  std::unordered_set<unsigned int> *v5; // rax
+
+  v3 = std::forward<std::unordered_set<unsigned int> &>(a2);
+  v4 = std::__addressof<std::_Optional_payload_base<std::unordered_set<unsigned int>>::_Storage<std::unordered_set<unsigned int>,false>>((std::_Optional_payload_base<std::unordered_set<unsigned int> >::_Storage<std::unordered_set<unsigned int>,false> *)this);
+  v5 = (std::unordered_set<unsigned int> *)operator new(0x38uLL, v4);
+  std::unordered_set<unsigned int>::unordered_set(v5, v3);
+  if ( *(char *)(((unsigned __int64)&this[56] >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_store1(&this[56]);
+  this[56].gap0[0] = 1;
+};
+
+// Line 197: range 0000000012EE71B0-0000000012EE71BA
+void __cdecl std::_Optional_payload_base<bool>::_Storage<bool,true>::_Storage(
+        std::_Optional_payload_base<bool>::_Storage<bool,true> *const this)
+{
+  ;
+};
+
+// Line 197: range 0000000012F0A734-0000000012F0A73E
+void __cdecl std::_Optional_payload_base<unsigned int>::_Storage<unsigned int,true>::_Storage(
+        std::_Optional_payload_base<unsigned int>::_Storage<unsigned int,true> *const this)
+{
+  ;
+};
+
+// Line 201: range 00000000130AEE26-00000000130AEEBE
+void __fastcall std::_Optional_payload_base<unsigned int>::_Storage<unsigned int,true>::_Storage<unsigned int &>(
+        unsigned __int64 this,
+        std::remove_reference<unsigned int&>::type *a2,
+        unsigned int *a3,
+        unsigned int *a4)
+{
+  unsigned int *v4; // rax
+  unsigned int *v5; // rdx
+  unsigned int v6; // ecx
+
+  v4 = std::forward<unsigned int &>(a2);
+  v5 = v4;
+  if ( *(_BYTE *)(((unsigned __int64)v4 >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)v4 & 7) + 3) >= *(_BYTE *)(((unsigned __int64)v4 >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_load4(v4);
+  }
+  v6 = *v5;
+  if ( *(_BYTE *)((this >> 3) + 0x7FFF8000) != 0 && (char)((this & 7) + 3) >= *(_BYTE *)((this >> 3) + 0x7FFF8000) )
+    __asan_report_store4(this);
+  *(_DWORD *)this = v6;
+};
+
+// Line 201: range 00000000130AEFDC-00000000130AF074
+void __fastcall std::_Optional_payload_base<unsigned int>::_Storage<unsigned int,true>::_Storage<unsigned int const&>(
+        unsigned __int64 this,
+        std::remove_reference<unsigned int const&>::type *a2,
+        const unsigned int *a3,
+        const unsigned int *a4)
+{
+  unsigned int *v4; // rax
+  unsigned int *v5; // rdx
+  unsigned int v6; // ecx
+
+  v4 = (unsigned int *)std::forward<unsigned int const&>(a2);
+  v5 = v4;
+  if ( *(_BYTE *)(((unsigned __int64)v4 >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)v4 & 7) + 3) >= *(_BYTE *)(((unsigned __int64)v4 >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_load4(v4);
+  }
+  v6 = *v5;
+  if ( *(_BYTE *)((this >> 3) + 0x7FFF8000) != 0 && (char)((this & 7) + 3) >= *(_BYTE *)((this >> 3) + 0x7FFF8000) )
+    __asan_report_store4(this);
+  *(_DWORD *)this = v6;
+};
+
+// Line 201: range 0000000013E33BC0-0000000013E33C58
+void __fastcall std::_Optional_payload_base<unsigned int>::_Storage<unsigned int,true>::_Storage<unsigned int>(
+        unsigned __int64 this,
+        std::remove_reference<unsigned int>::type *a2,
+        unsigned int *a3,
+        unsigned int *a4)
+{
+  unsigned int *v4; // rax
+  unsigned int *v5; // rdx
+  unsigned int v6; // ecx
+
+  v4 = std::forward<unsigned int>(a2);
+  v5 = v4;
+  if ( *(_BYTE *)(((unsigned __int64)v4 >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)v4 & 7) + 3) >= *(_BYTE *)(((unsigned __int64)v4 >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_load4(v4);
+  }
+  v6 = *v5;
+  if ( *(_BYTE *)((this >> 3) + 0x7FFF8000) != 0 && (char)((this & 7) + 3) >= *(_BYTE *)((this >> 3) + 0x7FFF8000) )
+    __asan_report_store4(this);
+  *(_DWORD *)this = v6;
+};
+
+// Line 218: range 000000000F78B97A-000000000F78B984
+void __cdecl std::_Optional_payload_base<WorktopConfig>::_Storage<WorktopConfig,false>::_Storage(
+        std::_Optional_payload_base<WorktopConfig>::_Storage<WorktopConfig,false> *const this)
+{
+  ;
+};
+
+// Line 218: range 000000000CE0C95C-000000000CE0C966
+void __cdecl std::_Optional_payload_base<std::unordered_set<unsigned int>>::_Storage<std::unordered_set<unsigned int>,false>::_Storage(
+        std::_Optional_payload_base<std::unordered_set<unsigned int> >::_Storage<std::unordered_set<unsigned int>,false> *const this)
+{
+  ;
+};
+
+// Line 218: range 00000000147FAF26-00000000147FAF30
+void __cdecl std::_Optional_payload_base<std::unordered_set<unsigned int>>::_Storage<std::unordered_set<unsigned int>,false>::_Storage(
+        std::_Optional_payload_base<std::unordered_set<unsigned int> >::_Storage<std::unordered_set<unsigned int>,false> *const this)
+{
+  ;
+};
+
+// Line 218: range 0000000012F0A422-0000000012F0A42C
+void __cdecl std::_Optional_payload_base<std::vector<unsigned int>>::_Storage<std::vector<unsigned int>,false>::_Storage(
+        std::_Optional_payload_base<std::vector<unsigned int> >::_Storage<std::vector<unsigned int>,false> *const this)
+{
+  ;
+};
+
+// Line 222: range 00000000149E6046-00000000149E6079
+void __fastcall std::_Optional_payload_base<std::unordered_set<unsigned int>>::_Storage<std::unordered_set<unsigned int>,false>::_Storage<std::unordered_set<unsigned int> const&>(
+        std::_Optional_payload_base<std::unordered_set<unsigned int> >::_Storage<std::unordered_set<unsigned int>,false> *const this,
+        std::remove_reference<const std::unordered_set<unsigned int>&>::type *a2,
+        const std::unordered_set<unsigned int> *a3,
+        const std::unordered_set<unsigned int> *a4)
+{
+  const std::unordered_set<unsigned int> *v4; // rax
+
+  v4 = std::forward<std::unordered_set<unsigned int> const&>(a2);
+  std::unordered_set<unsigned int>::unordered_set((std::unordered_set<unsigned int> *const)this, v4);
+};
+
+// Line 222: range 00000000130AECDC-00000000130AED0F
+void __fastcall std::_Optional_payload_base<std::vector<unsigned int>>::_Storage<std::vector<unsigned int>,false>::_Storage<std::vector<unsigned int>>(
+        std::_Optional_payload_base<std::vector<unsigned int> >::_Storage<std::vector<unsigned int>,false> *const this,
+        std::remove_reference<std::vector<unsigned int> >::type *a2,
+        std::vector<unsigned int> *a3,
+        std::vector<unsigned int> *a4)
+{
+  std::vector<unsigned int> *v4; // rax
+
+  v4 = std::forward<std::vector<unsigned int>>(a2);
+  std::vector<unsigned int>::vector((std::vector<unsigned int> *const)this, v4);
+};
+
+// Line 233: range 000000000F7E1062-000000000F7E106C
+void __cdecl std::_Optional_payload_base<WorktopConfig>::_Storage<WorktopConfig,false>::~_Storage(
+        std::_Optional_payload_base<WorktopConfig>::_Storage<WorktopConfig,false> *const this)
+{
+  ;
+};
+
+// Line 233: range 000000000C66941A-000000000C669424
+void __cdecl std::_Optional_payload_base<common::tools::PTree>::_Storage<common::tools::PTree,false>::~_Storage(
+        std::_Optional_payload_base<common::tools::PTree>::_Storage<common::tools::PTree,false> *const this)
+{
+  ;
+};
+
+// Line 233: range 000000000F7C5BE6-000000000F7C5BF0
+void __cdecl std::_Optional_payload_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>::_Storage<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,false>::~_Storage(
+        std::_Optional_payload_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > >::_Storage<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,false> *const this)
+{
+  ;
+};
+
+// Line 233: range 000000000CE5D21E-000000000CE5D228
+void __cdecl std::_Optional_payload_base<std::unordered_set<unsigned int>>::_Storage<std::unordered_set<unsigned int>,false>::~_Storage(
+        std::_Optional_payload_base<std::unordered_set<unsigned int> >::_Storage<std::unordered_set<unsigned int>,false> *const this)
+{
+  ;
+};
+
+// Line 239: range 0000000012F77F00-0000000012F77FCE
+void __fastcall ZNSt17_Optional_payloadIbLb1ELb1ELb1EECI2St22_Optional_payload_baseIbEIJbEEESt10in_place_tDpOT_(
+        std::_Optional_payload<bool,true,true,true> *const this,
+        std::remove_reference<bool>::type *a2,
+        bool *a3,
+        bool *a4,
+        __int64 a5,
+        __int64 a6,
+        char a7)
+{
+  unsigned __int64 v7; // rbx
+  __int64 v8; // rax
+  unsigned __int64 v9; // r12
+  char v10[96]; // [rsp+10h] [rbp-60h] BYREF
+
+  v7 = (unsigned __int64)v10;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v8 = __asan_stack_malloc_0(64LL);
+    if ( v8 )
+      v7 = v8;
+  }
+  *(_QWORD *)v7 = 1102416563LL;
+  *(_QWORD *)(v7 + 8) = "1 32 1 9 <unknown>";
+  *(_QWORD *)(v7 + 16) = ZNSt17_Optional_payloadIbLb1ELb1ELb1EECI2St22_Optional_payload_baseIbEIJbEEESt10in_place_tDpOT_;
+  v9 = v7 >> 3;
+  *(_DWORD *)(v9 + 2147450880) = -235802127;
+  *(_DWORD *)(v9 + 2147450884) = -202116351;
+  *(_BYTE *)(v7 + 32) = a7;
+  std::_Optional_payload_base<bool>::_Optional_payload_base<bool>(this, a2, a2, a4, a5, a6, (char)a2);
+  if ( v10 == (char *)v7 )
+  {
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v7 = 1172321806LL;
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 245: range 000000000F9F4308-000000000F9F43BB
+void __fastcall std::_Optional_payload_base<WorktopConfig>::_M_construct<WorktopConfig const&>(
+        std::_Optional_payload_base<WorktopConfig> *const this,
+        WorktopConfig *a2,
+        const WorktopConfig *__args_0)
+{
+  const WorktopConfig *v3; // r13
+  std::_Optional_payload_base<WorktopConfig>::_Storage<WorktopConfig,false> *v4; // rax
+  WorktopConfig *v5; // rax
+
+  v3 = std::forward<WorktopConfig const&>(a2);
+  v4 = std::__addressof<std::_Optional_payload_base<WorktopConfig>::_Storage<WorktopConfig,false>>(&this->_M_payload);
+  v5 = (WorktopConfig *)operator new(0x38uLL, v4);
+  WorktopConfig::WorktopConfig(v5, v3);
+  if ( *(char *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_store1(&this->_M_engaged);
+  this->_M_engaged = 1;
+};
+
+// Line 245: range 000000000D43E154-000000000D43E1DA
+void __fastcall std::_Optional_payload_base<std::unordered_set<unsigned int>>::_M_construct<std::unordered_set<unsigned int>>(
+        std::_Optional_payload_base<std::unordered_set<unsigned int> > *const this,
+        std::unordered_set<unsigned int> *a2,
+        std::unordered_set<unsigned int> *__args_0)
+{
+  std::unordered_set<unsigned int> *v3; // rbx
+  std::_Optional_payload_base<std::unordered_set<unsigned int> >::_Storage<std::unordered_set<unsigned int>,false> *v4; // rax
+  std::unordered_set<unsigned int> *v5; // rax
+
+  v3 = std::forward<std::unordered_set<unsigned int>>(a2);
+  v4 = std::__addressof<std::_Optional_payload_base<std::unordered_set<unsigned int>>::_Storage<std::unordered_set<unsigned int>,false>>(&this->_M_payload);
+  v5 = (std::unordered_set<unsigned int> *)operator new(0x38uLL, v4);
+  std::unordered_set<unsigned int>::unordered_set(v5, v3);
+  if ( *(char *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_store1(&this->_M_engaged);
+  this->_M_engaged = 1;
+};
+
+// Line 254: range 000000000F8A2BB2-000000000F8A2C07
+void __cdecl std::_Optional_payload_base<WorktopConfig>::_M_destroy(
+        std::_Optional_payload_base<WorktopConfig> *const this)
+{
+  if ( *(char *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_store1(&this->_M_engaged);
+  this->_M_engaged = 0;
+  WorktopConfig::~WorktopConfig((WorktopConfig *const)this);
+};
+
+// Line 254: range 000000000C6763A6-000000000C6763FB
+void __cdecl std::_Optional_payload_base<common::tools::PTree>::_M_destroy(
+        std::_Optional_payload_base<common::tools::PTree> *const this)
+{
+  if ( *(char *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_store1(&this->_M_engaged);
+  this->_M_engaged = 0;
+  common::tools::PTree::~PTree((common::tools::PTree *const)this);
+};
+
+// Line 254: range 000000000F883990-000000000F8839E5
+void __cdecl std::_Optional_payload_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>::_M_destroy(
+        std::_Optional_payload_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > > *const this)
+{
+  if ( *(char *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_store1(&this->_M_engaged);
+  this->_M_engaged = 0;
+  std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>::~pair((std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > *const)this);
+};
+
+// Line 254: range 000000000D02FF7E-000000000D02FFD3
+void __cdecl std::_Optional_payload_base<std::unordered_set<unsigned int>>::_M_destroy(
+        std::_Optional_payload_base<std::unordered_set<unsigned int> > *const this)
+{
+  if ( *(char *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_store1(&this->_M_engaged);
+  this->_M_engaged = 0;
+  std::unordered_set<unsigned int>::~unordered_set((std::unordered_set<unsigned int> *const)this);
+};
+
+// Line 265: range 000000000C6763FC-000000000C676409
+common::tools::PTree *__cdecl std::_Optional_payload_base<common::tools::PTree>::_M_get(
+        std::_Optional_payload_base<common::tools::PTree> *const this)
+{
+  return (common::tools::PTree *)this;
+};
+
+// Line 265: range 000000000CF4372E-000000000CF4373B
+std::unordered_set<unsigned int> *__cdecl std::_Optional_payload_base<std::unordered_set<unsigned int>>::_M_get(
+        std::_Optional_payload_base<std::unordered_set<unsigned int> > *const this)
+{
+  return (std::unordered_set<unsigned int> *)this;
+};
+
+// Line 269: range 000000000F9F42FA-000000000F9F4307
+const WorktopConfig *__cdecl std::_Optional_payload_base<WorktopConfig>::_M_get(
+        const std::_Optional_payload_base<WorktopConfig> *const this)
+{
+  return (const WorktopConfig *)this;
+};
+
+// Line 269: range 0000000013C71014-0000000013C71021
+const unsigned int *__cdecl std::_Optional_payload_base<unsigned int>::_M_get(
+        const std::_Optional_payload_base<unsigned int> *const this)
+{
+  return (const unsigned int *)this;
+};
+
+// Line 274: range 000000000F83CD00-000000000F83CD59
+void __cdecl std::_Optional_payload_base<WorktopConfig>::_M_reset(
+        std::_Optional_payload_base<WorktopConfig> *const this)
+{
+  if ( *(char *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_load1(&this->_M_engaged);
+  if ( this->_M_engaged )
+    std::_Optional_payload_base<WorktopConfig>::_M_destroy(this);
+};
+
+// Line 274: range 000000000C669426-000000000C66947F
+void __cdecl std::_Optional_payload_base<common::tools::PTree>::_M_reset(
+        std::_Optional_payload_base<common::tools::PTree> *const this)
+{
+  if ( *(char *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_load1(&this->_M_engaged);
+  if ( this->_M_engaged )
+    std::_Optional_payload_base<common::tools::PTree>::_M_destroy(this);
+};
+
+// Line 274: range 000000000F81D7C8-000000000F81D821
+void __cdecl std::_Optional_payload_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>::_M_reset(
+        std::_Optional_payload_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > > *const this)
+{
+  if ( *(char *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_load1(&this->_M_engaged);
+  if ( this->_M_engaged )
+    std::_Optional_payload_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>::_M_destroy(this);
+};
+
+// Line 274: range 000000000CF43164-000000000CF431BD
+void __cdecl std::_Optional_payload_base<std::unordered_set<unsigned int>>::_M_reset(
+        std::_Optional_payload_base<std::unordered_set<unsigned int> > *const this)
+{
+  if ( *(char *)(((unsigned __int64)&this->_M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_load1(&this->_M_engaged);
+  if ( this->_M_engaged )
+    std::_Optional_payload_base<std::unordered_set<unsigned int>>::_M_destroy(this);
+};
+
+// Line 278: range 000000000C669480-000000000C6694C8
+bool __cdecl std::_Optional_base_impl<common::tools::PTree,std::_Optional_base<common::tools::PTree,false,false>>::_M_is_engaged(
+        const std::_Optional_base_impl<common::tools::PTree,std::_Optional_base<common::tools::PTree,false,false> > *const this)
+{
+  if ( *(char *)(((unsigned __int64)&this[8] >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_load1(&this[8]);
+  return this[8].gap0[0];
+};
+
+// Line 298: range 0000000012FBEF00-0000000012FBEFCE
+void __fastcall ZNSt17_Optional_payloadIjLb1ELb1ELb1EECI2St22_Optional_payload_baseIjEIJRKjEEESt10in_place_tDpOT_(
+        std::_Optional_payload<unsigned int,true,true,true> *const this,
+        std::remove_reference<unsigned int const&>::type *a2,
+        const unsigned int *a3,
+        const unsigned int *a4,
+        __int64 a5,
+        __int64 a6,
+        char a7)
+{
+  unsigned __int64 v7; // rbx
+  __int64 v8; // rax
+  unsigned __int64 v9; // r12
+  char v10[96]; // [rsp+10h] [rbp-60h] BYREF
+
+  v7 = (unsigned __int64)v10;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v8 = __asan_stack_malloc_0(64LL);
+    if ( v8 )
+      v7 = v8;
+  }
+  *(_QWORD *)v7 = 1102416563LL;
+  *(_QWORD *)(v7 + 8) = "1 32 1 9 <unknown>";
+  *(_QWORD *)(v7 + 16) = ZNSt17_Optional_payloadIjLb1ELb1ELb1EECI2St22_Optional_payload_baseIjEIJRKjEEESt10in_place_tDpOT_;
+  v9 = v7 >> 3;
+  *(_DWORD *)(v9 + 2147450880) = -235802127;
+  *(_DWORD *)(v9 + 2147450884) = -202116351;
+  *(_BYTE *)(v7 + 32) = a7;
+  std::_Optional_payload_base<unsigned int>::_Optional_payload_base<unsigned int const&>(
+    this,
+    a2,
+    a2,
+    a4,
+    a5,
+    a6,
+    (char)a2);
+  if ( v10 == (char *)v7 )
+  {
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v7 = 1172321806LL;
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 298: range 0000000012FBEDFC-0000000012FBEECA
+void __fastcall ZNSt17_Optional_payloadIjLb1ELb1ELb1EECI2St22_Optional_payload_baseIjEIJRjEEESt10in_place_tDpOT_(
+        std::_Optional_payload<unsigned int,true,true,true> *const this,
+        std::remove_reference<unsigned int&>::type *a2,
+        unsigned int *a3,
+        unsigned int *a4,
+        __int64 a5,
+        __int64 a6,
+        char a7)
+{
+  unsigned __int64 v7; // rbx
+  __int64 v8; // rax
+  unsigned __int64 v9; // r12
+  char v10[96]; // [rsp+10h] [rbp-60h] BYREF
+
+  v7 = (unsigned __int64)v10;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v8 = __asan_stack_malloc_0(64LL);
+    if ( v8 )
+      v7 = v8;
+  }
+  *(_QWORD *)v7 = 1102416563LL;
+  *(_QWORD *)(v7 + 8) = "1 32 1 9 <unknown>";
+  *(_QWORD *)(v7 + 16) = ZNSt17_Optional_payloadIjLb1ELb1ELb1EECI2St22_Optional_payload_baseIjEIJRjEEESt10in_place_tDpOT_;
+  v9 = v7 >> 3;
+  *(_DWORD *)(v9 + 2147450880) = -235802127;
+  *(_DWORD *)(v9 + 2147450884) = -202116351;
+  *(_BYTE *)(v7 + 32) = a7;
+  std::_Optional_payload_base<unsigned int>::_Optional_payload_base<unsigned int &>(this, a2, a2, a4, a5, a6, (char)a2);
+  if ( v10 == (char *)v7 )
+  {
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v7 = 1172321806LL;
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 298: range 0000000013D4ACE8-0000000013D4ADB6
+void __fastcall ZNSt17_Optional_payloadIjLb1ELb1ELb1EECI2St22_Optional_payload_baseIjEIJjEEESt10in_place_tDpOT_(
+        std::_Optional_payload<unsigned int,true,true,true> *const this,
+        std::remove_reference<unsigned int>::type *a2,
+        unsigned int *a3,
+        unsigned int *a4,
+        __int64 a5,
+        __int64 a6,
+        char a7)
+{
+  unsigned __int64 v7; // rbx
+  __int64 v8; // rax
+  unsigned __int64 v9; // r12
+  char v10[96]; // [rsp+10h] [rbp-60h] BYREF
+
+  v7 = (unsigned __int64)v10;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v8 = __asan_stack_malloc_0(64LL);
+    if ( v8 )
+      v7 = v8;
+  }
+  *(_QWORD *)v7 = 1102416563LL;
+  *(_QWORD *)(v7 + 8) = "1 32 1 9 <unknown>";
+  *(_QWORD *)(v7 + 16) = ZNSt17_Optional_payloadIjLb1ELb1ELb1EECI2St22_Optional_payload_baseIjEIJjEEESt10in_place_tDpOT_;
+  v9 = v7 >> 3;
+  *(_DWORD *)(v9 + 2147450880) = -235802127;
+  *(_DWORD *)(v9 + 2147450884) = -202116351;
+  *(_BYTE *)(v7 + 32) = a7;
+  std::_Optional_payload_base<unsigned int>::_Optional_payload_base<unsigned int>(this, a2, a2, a4, a5, a6, (char)a2);
+  if ( v10 == (char *)v7 )
+  {
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v7 = 1172321806LL;
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 300: range 0000000012EE7218-0000000012EE7232
+void __cdecl std::_Optional_payload<bool,true,true,true>::_Optional_payload(
+        std::_Optional_payload<bool,true,true,true> *const this)
+{
+  std::_Optional_payload_base<bool>::_Optional_payload_base(this);
+};
+
+// Line 300: range 0000000012F0A79C-0000000012F0A7B6
+void __cdecl std::_Optional_payload<unsigned int,true,true,true>::_Optional_payload(
+        std::_Optional_payload<unsigned int,true,true,true> *const this)
+{
+  std::_Optional_payload_base<unsigned int>::_Optional_payload_base(this);
+};
+
+// Line 356: range 000000000F9D2216-000000000F9D22EF
+void __fastcall ZNSt17_Optional_payloadI13WorktopConfigLb1ELb0ELb0EECI2St22_Optional_payload_baseIS0_EEbRKS3_(
+        std::_Optional_payload<WorktopConfig,true,false,false> *const this,
+        char a2,
+        const std::_Optional_payload_base<WorktopConfig> *a3)
+{
+  unsigned __int64 v3; // rbx
+  __int64 v4; // rax
+  unsigned __int64 v5; // r12
+  char v7[96]; // [rsp+20h] [rbp-60h] BYREF
+
+  v3 = (unsigned __int64)v7;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v4 = __asan_stack_malloc_0(64LL);
+    if ( v4 )
+      v3 = v4;
+  }
+  *(_QWORD *)v3 = 1102416563LL;
+  *(_QWORD *)(v3 + 8) = "1 32 1 9 <unknown>";
+  *(_QWORD *)(v3 + 16) = ZNSt17_Optional_payloadI13WorktopConfigLb1ELb0ELb0EECI2St22_Optional_payload_baseIS0_EEbRKS3_;
+  v5 = v3 >> 3;
+  *(_DWORD *)(v5 + 2147450880) = -235802127;
+  *(_DWORD *)(v5 + 2147450884) = -202116351;
+  *(_BYTE *)(v3 + 32) = a2;
+  std::_Optional_payload_base<WorktopConfig>::_Optional_payload_base(this, *(_BYTE *)(v3 + 32), a3);
+  if ( v7 == (char *)v3 )
+  {
+    *(_QWORD *)((v3 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v3 = 1172321806LL;
+    *(_QWORD *)((v3 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 356: range 000000000D3D49FC-000000000D3D4AD5
+void __fastcall ZNSt17_Optional_payloadISt13unordered_setIjSt4hashIjESt8equal_toIjESaIjEELb1ELb0ELb0EECI2St22_Optional_payload_baseIS6_EEbOS9_(
+        std::_Optional_payload<std::unordered_set<unsigned int>,true,false,false> *const this,
+        char a2,
+        std::_Optional_payload_base<std::unordered_set<unsigned int> > *a3)
+{
+  unsigned __int64 v3; // rbx
+  __int64 v4; // rax
+  unsigned __int64 v5; // r12
+  char v7[96]; // [rsp+20h] [rbp-60h] BYREF
+
+  v3 = (unsigned __int64)v7;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v4 = __asan_stack_malloc_0(64LL);
+    if ( v4 )
+      v3 = v4;
+  }
+  *(_QWORD *)v3 = 1102416563LL;
+  *(_QWORD *)(v3 + 8) = "1 32 1 9 <unknown>";
+  *(_QWORD *)(v3 + 16) = ZNSt17_Optional_payloadISt13unordered_setIjSt4hashIjESt8equal_toIjESaIjEELb1ELb0ELb0EECI2St22_Optional_payload_baseIS6_EEbOS9_;
+  v5 = v3 >> 3;
+  *(_DWORD *)(v5 + 2147450880) = -235802127;
+  *(_DWORD *)(v5 + 2147450884) = -202116351;
+  *(_BYTE *)(v3 + 32) = a2;
+  std::_Optional_payload_base<std::unordered_set<unsigned int>>::_Optional_payload_base(this, *(_BYTE *)(v3 + 32), a3);
+  if ( v7 == (char *)v3 )
+  {
+    *(_QWORD *)((v3 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v3 = 1172321806LL;
+    *(_QWORD *)((v3 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 356: range 00000000148E9D34-00000000148E9E02
+void __fastcall ZNSt17_Optional_payloadISt13unordered_setIjSt4hashIjESt8equal_toIjESaIjEELb1ELb0ELb0EECI2St22_Optional_payload_baseIS6_EIJRKS6_EEESt10in_place_tDpOT_(
+        std::_Optional_payload<std::unordered_set<unsigned int>,true,false,false> *const this,
+        std::unordered_set<unsigned int> *a2,
+        const std::unordered_set<unsigned int> *a3,
+        const std::unordered_set<unsigned int> *a4,
+        __int64 a5,
+        __int64 a6,
+        char a7)
+{
+  unsigned __int64 v7; // rbx
+  __int64 v8; // rax
+  unsigned __int64 v9; // r12
+  char v10[96]; // [rsp+10h] [rbp-60h] BYREF
+
+  v7 = (unsigned __int64)v10;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v8 = __asan_stack_malloc_0(64LL);
+    if ( v8 )
+      v7 = v8;
+  }
+  *(_QWORD *)v7 = 1102416563LL;
+  *(_QWORD *)(v7 + 8) = "1 32 1 9 <unknown>";
+  *(_QWORD *)(v7 + 16) = ZNSt17_Optional_payloadISt13unordered_setIjSt4hashIjESt8equal_toIjESaIjEELb1ELb0ELb0EECI2St22_Optional_payload_baseIS6_EIJRKS6_EEESt10in_place_tDpOT_;
+  v9 = v7 >> 3;
+  *(_DWORD *)(v9 + 2147450880) = -235802127;
+  *(_DWORD *)(v9 + 2147450884) = -202116351;
+  *(_BYTE *)(v7 + 32) = a7;
+  std::_Optional_payload_base<std::unordered_set<unsigned int>>::_Optional_payload_base<std::unordered_set<unsigned int> const&>(
+    this,
+    a2,
+    a2,
+    a4,
+    a5,
+    a6,
+    (char)a2);
+  if ( v10 == (char *)v7 )
+  {
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v7 = 1172321806LL;
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 356: range 0000000012FBEC28-0000000012FBECF6
+void __fastcall ZNSt17_Optional_payloadISt6vectorIjSaIjEELb1ELb0ELb0EECI2St22_Optional_payload_baseIS2_EIJS2_EEESt10in_place_tDpOT_(
+        std::_Optional_payload<std::vector<unsigned int>,true,false,false> *const this,
+        std::vector<unsigned int> *a2,
+        std::vector<unsigned int> *a3,
+        std::vector<unsigned int> *a4,
+        __int64 a5,
+        __int64 a6,
+        char a7)
+{
+  unsigned __int64 v7; // rbx
+  __int64 v8; // rax
+  unsigned __int64 v9; // r12
+  char v10[96]; // [rsp+10h] [rbp-60h] BYREF
+
+  v7 = (unsigned __int64)v10;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v8 = __asan_stack_malloc_0(64LL);
+    if ( v8 )
+      v7 = v8;
+  }
+  *(_QWORD *)v7 = 1102416563LL;
+  *(_QWORD *)(v7 + 8) = "1 32 1 9 <unknown>";
+  *(_QWORD *)(v7 + 16) = ZNSt17_Optional_payloadISt6vectorIjSaIjEELb1ELb0ELb0EECI2St22_Optional_payload_baseIS2_EIJS2_EEESt10in_place_tDpOT_;
+  v9 = v7 >> 3;
+  *(_DWORD *)(v9 + 2147450880) = -235802127;
+  *(_DWORD *)(v9 + 2147450884) = -202116351;
+  *(_BYTE *)(v7 + 32) = a7;
+  std::_Optional_payload_base<std::vector<unsigned int>>::_Optional_payload_base<std::vector<unsigned int>>(
+    this,
+    a2,
+    a2,
+    a4,
+    a5,
+    a6,
+    (char)a2);
+  if ( v10 == (char *)v7 )
+  {
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v7 = 1172321806LL;
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 358: range 000000000F78B9F8-000000000F78BA12
+void __cdecl std::_Optional_payload<WorktopConfig,true,false,false>::_Optional_payload(
+        std::_Optional_payload<WorktopConfig,true,false,false> *const this)
+{
+  std::_Optional_payload_base<WorktopConfig>::_Optional_payload_base(this);
+};
+
+// Line 358: range 000000000CE0C9DA-000000000CE0C9F4
+void __cdecl std::_Optional_payload<std::unordered_set<unsigned int>,true,false,false>::_Optional_payload(
+        std::_Optional_payload<std::unordered_set<unsigned int>,true,false,false> *const this)
+{
+  std::_Optional_payload_base<std::unordered_set<unsigned int>>::_Optional_payload_base(this);
+};
+
+// Line 358: range 0000000012F0A484-0000000012F0A49E
+void __cdecl std::_Optional_payload<std::vector<unsigned int>,true,false,false>::_Optional_payload(
+        std::_Optional_payload<std::vector<unsigned int>,true,false,false> *const this)
+{
+  std::_Optional_payload_base<std::vector<unsigned int>>::_Optional_payload_base(this);
+};
+
+// Line 359: range 000000000F8427CA-000000000F8427E3
+WorktopConfig *__cdecl std::_Optional_base_impl<WorktopConfig,std::_Optional_base<WorktopConfig,false,false>>::_M_get(
+        std::_Optional_base_impl<WorktopConfig,std::_Optional_base<WorktopConfig,false,false> > *const this)
+{
+  return std::_Optional_payload_base<WorktopConfig>::_M_get((std::_Optional_payload_base<WorktopConfig> *const)this);
+};
+
+// Line 359: range 000000000F78BA14-000000000F78BA2E
+void __cdecl std::_Optional_payload<WorktopConfig,true,false,false>::~_Optional_payload(
+        std::_Optional_payload<WorktopConfig,true,false,false> *const this)
+{
+  std::_Optional_payload_base<WorktopConfig>::~_Optional_payload_base(this);
+};
+
+// Line 359: range 000000000C65B428-000000000C65B442
+void __cdecl std::_Optional_payload<common::tools::PTree,true,false,false>::~_Optional_payload(
+        std::_Optional_payload<common::tools::PTree,true,false,false> *const this)
+{
+  std::_Optional_payload_base<common::tools::PTree>::~_Optional_payload_base(this);
+};
+
+// Line 359: range 000000000F785E8C-000000000F785EA6
+void __cdecl std::_Optional_payload<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,true,false,false>::~_Optional_payload(
+        std::_Optional_payload<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,true,false,false> *const this)
+{
+  std::_Optional_payload_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>::~_Optional_payload_base(this);
+};
+
+// Line 359: range 000000000CE0C9F6-000000000CE0CA10
+void __cdecl std::_Optional_payload<std::unordered_set<unsigned int>,true,false,false>::~_Optional_payload(
+        std::_Optional_payload<std::unordered_set<unsigned int>,true,false,false> *const this)
+{
+  std::_Optional_payload_base<std::unordered_set<unsigned int>>::~_Optional_payload_base(this);
+};
+
+// Line 390: range 000000000F9D22F0-000000000F9D23C9
+void __fastcall ZNSt17_Optional_payloadI13WorktopConfigLb0ELb0ELb0EECI2St22_Optional_payload_baseIS0_EEbRKS3_(
+        std::_Optional_payload<WorktopConfig,false,false,false> *const this,
+        char a2,
+        const std::_Optional_payload_base<WorktopConfig> *a3)
+{
+  unsigned __int64 v3; // rbx
+  __int64 v4; // rax
+  unsigned __int64 v5; // r12
+  char v7[96]; // [rsp+20h] [rbp-60h] BYREF
+
+  v3 = (unsigned __int64)v7;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v4 = __asan_stack_malloc_0(64LL);
+    if ( v4 )
+      v3 = v4;
+  }
+  *(_QWORD *)v3 = 1102416563LL;
+  *(_QWORD *)(v3 + 8) = "1 32 1 9 <unknown>";
+  *(_QWORD *)(v3 + 16) = ZNSt17_Optional_payloadI13WorktopConfigLb0ELb0ELb0EECI2St22_Optional_payload_baseIS0_EEbRKS3_;
+  v5 = v3 >> 3;
+  *(_DWORD *)(v5 + 2147450880) = -235802127;
+  *(_DWORD *)(v5 + 2147450884) = -202116351;
+  *(_BYTE *)(v3 + 32) = a2;
+  ZNSt17_Optional_payloadI13WorktopConfigLb1ELb0ELb0EECI2St22_Optional_payload_baseIS0_EEbRKS3_(
+    this,
+    *(_BYTE *)(v3 + 32),
+    a3);
+  if ( v7 == (char *)v3 )
+  {
+    *(_QWORD *)((v3 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v3 = 1172321806LL;
+    *(_QWORD *)((v3 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 390: range 000000000D3D4AD6-000000000D3D4BAF
+void __fastcall ZNSt17_Optional_payloadISt13unordered_setIjSt4hashIjESt8equal_toIjESaIjEELb0ELb0ELb0EECI2St22_Optional_payload_baseIS6_EEbOS9_(
+        std::_Optional_payload<std::unordered_set<unsigned int>,false,false,false> *const this,
+        char a2,
+        std::_Optional_payload_base<std::unordered_set<unsigned int> > *a3)
+{
+  unsigned __int64 v3; // rbx
+  __int64 v4; // rax
+  unsigned __int64 v5; // r12
+  char v7[96]; // [rsp+20h] [rbp-60h] BYREF
+
+  v3 = (unsigned __int64)v7;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v4 = __asan_stack_malloc_0(64LL);
+    if ( v4 )
+      v3 = v4;
+  }
+  *(_QWORD *)v3 = 1102416563LL;
+  *(_QWORD *)(v3 + 8) = "1 32 1 9 <unknown>";
+  *(_QWORD *)(v3 + 16) = ZNSt17_Optional_payloadISt13unordered_setIjSt4hashIjESt8equal_toIjESaIjEELb0ELb0ELb0EECI2St22_Optional_payload_baseIS6_EEbOS9_;
+  v5 = v3 >> 3;
+  *(_DWORD *)(v5 + 2147450880) = -235802127;
+  *(_DWORD *)(v5 + 2147450884) = -202116351;
+  *(_BYTE *)(v3 + 32) = a2;
+  ZNSt17_Optional_payloadISt13unordered_setIjSt4hashIjESt8equal_toIjESaIjEELb1ELb0ELb0EECI2St22_Optional_payload_baseIS6_EEbOS9_(
+    this,
+    *(_BYTE *)(v3 + 32),
+    a3);
+  if ( v7 == (char *)v3 )
+  {
+    *(_QWORD *)((v3 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v3 = 1172321806LL;
+    *(_QWORD *)((v3 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 390: range 00000000148E9E04-00000000148E9ED2
+void __fastcall ZNSt17_Optional_payloadISt13unordered_setIjSt4hashIjESt8equal_toIjESaIjEELb0ELb0ELb0EECI2St22_Optional_payload_baseIS6_EIJRKS6_EEESt10in_place_tDpOT_(
+        std::_Optional_payload<std::unordered_set<unsigned int>,false,false,false> *const this,
+        std::unordered_set<unsigned int> *a2,
+        const std::unordered_set<unsigned int> *a3,
+        const std::unordered_set<unsigned int> *a4,
+        __int64 a5,
+        __int64 a6,
+        char a7)
+{
+  unsigned __int64 v7; // rbx
+  __int64 v8; // rax
+  unsigned __int64 v9; // r12
+  char v10[96]; // [rsp+10h] [rbp-60h] BYREF
+
+  v7 = (unsigned __int64)v10;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v8 = __asan_stack_malloc_0(64LL);
+    if ( v8 )
+      v7 = v8;
+  }
+  *(_QWORD *)v7 = 1102416563LL;
+  *(_QWORD *)(v7 + 8) = "1 32 1 9 <unknown>";
+  *(_QWORD *)(v7 + 16) = ZNSt17_Optional_payloadISt13unordered_setIjSt4hashIjESt8equal_toIjESaIjEELb0ELb0ELb0EECI2St22_Optional_payload_baseIS6_EIJRKS6_EEESt10in_place_tDpOT_;
+  v9 = v7 >> 3;
+  *(_DWORD *)(v9 + 2147450880) = -235802127;
+  *(_DWORD *)(v9 + 2147450884) = -202116351;
+  *(_BYTE *)(v7 + 32) = a7;
+  ZNSt17_Optional_payloadISt13unordered_setIjSt4hashIjESt8equal_toIjESaIjEELb1ELb0ELb0EECI2St22_Optional_payload_baseIS6_EIJRKS6_EEESt10in_place_tDpOT_(
+    this,
+    a2,
+    a2,
+    a4,
+    a5,
+    a6,
+    (char)a2);
+  if ( v10 == (char *)v7 )
+  {
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v7 = 1172321806LL;
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 390: range 0000000012FBECF8-0000000012FBEDC6
+void __fastcall ZNSt17_Optional_payloadISt6vectorIjSaIjEELb0ELb0ELb0EECI2St22_Optional_payload_baseIS2_EIJS2_EEESt10in_place_tDpOT_(
+        std::_Optional_payload<std::vector<unsigned int>,false,false,false> *const this,
+        std::vector<unsigned int> *a2,
+        std::vector<unsigned int> *a3,
+        std::vector<unsigned int> *a4,
+        __int64 a5,
+        __int64 a6,
+        char a7)
+{
+  unsigned __int64 v7; // rbx
+  __int64 v8; // rax
+  unsigned __int64 v9; // r12
+  char v10[96]; // [rsp+10h] [rbp-60h] BYREF
+
+  v7 = (unsigned __int64)v10;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v8 = __asan_stack_malloc_0(64LL);
+    if ( v8 )
+      v7 = v8;
+  }
+  *(_QWORD *)v7 = 1102416563LL;
+  *(_QWORD *)(v7 + 8) = "1 32 1 9 <unknown>";
+  *(_QWORD *)(v7 + 16) = ZNSt17_Optional_payloadISt6vectorIjSaIjEELb0ELb0ELb0EECI2St22_Optional_payload_baseIS2_EIJS2_EEESt10in_place_tDpOT_;
+  v9 = v7 >> 3;
+  *(_DWORD *)(v9 + 2147450880) = -235802127;
+  *(_DWORD *)(v9 + 2147450884) = -202116351;
+  *(_BYTE *)(v7 + 32) = a7;
+  ZNSt17_Optional_payloadISt6vectorIjSaIjEELb1ELb0ELb0EECI2St22_Optional_payload_baseIS2_EIJS2_EEESt10in_place_tDpOT_(
+    this,
+    a2,
+    a2,
+    a4,
+    a5,
+    a6,
+    (char)a2);
+  if ( v10 == (char *)v7 )
+  {
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v7 = 1172321806LL;
+    *(_QWORD *)((v7 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 391: range 000000000F78BA30-000000000F78BA4A
+void __cdecl std::_Optional_payload<WorktopConfig,false,false,false>::_Optional_payload(
+        std::_Optional_payload<WorktopConfig,false,false,false> *const this)
+{
+  std::_Optional_payload<WorktopConfig,true,false,false>::_Optional_payload(this);
+};
+
+// Line 391: range 000000000CE0CA12-000000000CE0CA2C
+void __cdecl std::_Optional_payload<std::unordered_set<unsigned int>,false,false,false>::_Optional_payload(
+        std::_Optional_payload<std::unordered_set<unsigned int>,false,false,false> *const this)
+{
+  std::_Optional_payload<std::unordered_set<unsigned int>,true,false,false>::_Optional_payload(this);
+};
+
+// Line 391: range 0000000012F0A4A0-0000000012F0A4BA
+void __cdecl std::_Optional_payload<std::vector<unsigned int>,false,false,false>::_Optional_payload(
+        std::_Optional_payload<std::vector<unsigned int>,false,false,false> *const this)
+{
+  std::_Optional_payload<std::vector<unsigned int>,true,false,false>::_Optional_payload(this);
+};
+
+// Line 398: range 000000000F7E106E-000000000F7E1094
+void __cdecl std::_Optional_payload<WorktopConfig,false,false,false>::~_Optional_payload(
+        std::_Optional_payload<WorktopConfig,false,false,false> *const this)
+{
+  std::_Optional_payload_base<WorktopConfig>::_M_reset(this);
+  std::_Optional_payload<WorktopConfig,true,false,false>::~_Optional_payload(this);
+};
+
+// Line 398: range 000000000C65B444-000000000C65B46A
+void __cdecl std::_Optional_payload<common::tools::PTree,false,false,false>::~_Optional_payload(
+        std::_Optional_payload<common::tools::PTree,false,false,false> *const this)
+{
+  std::_Optional_payload_base<common::tools::PTree>::_M_reset(this);
+  std::_Optional_payload<common::tools::PTree,true,false,false>::~_Optional_payload(this);
+};
+
+// Line 398: range 000000000F7C5BF2-000000000F7C5C18
+void __cdecl std::_Optional_payload<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,false,false,false>::~_Optional_payload(
+        std::_Optional_payload<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,false,false,false> *const this)
+{
+  std::_Optional_payload_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>::_M_reset(this);
+  std::_Optional_payload<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,true,false,false>::~_Optional_payload(this);
+};
+
+// Line 398: range 000000000CE5D22A-000000000CE5D250
+void __cdecl std::_Optional_payload<std::unordered_set<unsigned int>,false,false,false>::~_Optional_payload(
+        std::_Optional_payload<std::unordered_set<unsigned int>,false,false,false> *const this)
+{
+  std::_Optional_payload_base<std::unordered_set<unsigned int>>::_M_reset(this);
+  std::_Optional_payload<std::unordered_set<unsigned int>,true,false,false>::~_Optional_payload(this);
+};
+
+// Line 413: range 000000000F84288E-000000000F842941
+void __fastcall std::_Optional_base_impl<WorktopConfig,std::_Optional_base<WorktopConfig,false,false>>::_M_construct<WorktopConfig&>(
+        std::_Optional_base_impl<WorktopConfig,std::_Optional_base<WorktopConfig,false,false> > *const this,
+        WorktopConfig *a2,
+        WorktopConfig *__args_0)
+{
+  WorktopConfig *v3; // r13
+  std::_Optional_payload_base<WorktopConfig>::_Storage<WorktopConfig,false> *v4; // rax
+  WorktopConfig *v5; // rax
+
+  v3 = std::forward<WorktopConfig &>(a2);
+  v4 = std::__addressof<std::_Optional_payload_base<WorktopConfig>::_Storage<WorktopConfig,false>>((std::_Optional_payload_base<WorktopConfig>::_Storage<WorktopConfig,false> *)this);
+  v5 = (WorktopConfig *)operator new(0x38uLL, v4);
+  WorktopConfig::WorktopConfig(v5, v3);
+  if ( *(char *)(((unsigned __int64)&this[56] >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_store1(&this[56]);
+  this[56].gap0[0] = 1;
+};
+
+// Line 413: range 000000000F81E8CE-000000000F81E954
+void __fastcall std::_Optional_base_impl<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,false,false>>::_M_construct<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>(
+        std::_Optional_base_impl<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,false,false> > *const this,
+        std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > *a2,
+        std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > *__args_0)
+{
+  std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > *v3; // rbx
+  std::_Optional_payload_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > >::_Storage<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,false> *v4; // rax
+  std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > *v5; // rax
+
+  v3 = std::forward<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>(a2);
+  v4 = std::__addressof<std::_Optional_payload_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>::_Storage<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,false>>((std::_Optional_payload_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > >::_Storage<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,false> *)this);
+  v5 = (std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > *)operator new(0x20uLL, v4);
+  std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>::pair(v5, v3);
+  if ( *(char *)(((unsigned __int64)&this[32] >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_store1(&this[32]);
+  this[32].gap0[0] = 1;
+};
+
+// Line 431: range 000000000CFCDF0E-000000000CFCDF56
+bool __cdecl std::_Optional_base_impl<WorktopConfig,std::_Optional_base<WorktopConfig,false,false>>::_M_is_engaged(
+        const std::_Optional_base_impl<WorktopConfig,std::_Optional_base<WorktopConfig,false,false> > *const this)
+{
+  if ( *(char *)(((unsigned __int64)&this[56] >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_load1(&this[56]);
+  return this[56].gap0[0];
+};
+
+// Line 431: range 000000000F785EFA-000000000F785F42
+bool __cdecl std::_Optional_base_impl<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,false,false>>::_M_is_engaged(
+        const std::_Optional_base_impl<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,false,false> > *const this)
+{
+  if ( *(char *)(((unsigned __int64)&this[32] >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_load1(&this[32]);
+  return this[32].gap0[0];
+};
+
+// Line 431: range 000000000CE0CBFE-000000000CE0CC46
+bool __cdecl std::_Optional_base_impl<std::unordered_set<unsigned int>,std::_Optional_base<std::unordered_set<unsigned int>,false,false>>::_M_is_engaged(
+        const std::_Optional_base_impl<std::unordered_set<unsigned int>,std::_Optional_base<std::unordered_set<unsigned int>,false,false> > *const this)
+{
+  if ( *(char *)(((unsigned __int64)&this[56] >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_load1(&this[56]);
+  return this[56].gap0[0];
+};
+
+// Line 431: range 0000000013C71022-0000000013C7106F
+bool __cdecl std::_Optional_base_impl<unsigned int,std::_Optional_base<unsigned int,true,true>>::_M_is_engaged(
+        const std::_Optional_base_impl<unsigned int,std::_Optional_base<unsigned int,true,true> > *const this)
+{
+  if ( *(_BYTE *)(((unsigned __int64)&this[4] >> 3) + 0x7FFF8000) != 0
+    && (((unsigned __int8)this + 4) & 7) >= *(_BYTE *)(((unsigned __int64)&this[4] >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_load1(&this[4]);
+  }
+  return this[4].gap0[0];
+};
+
+// Line 436: range 000000000C6694CA-000000000C6694E3
+common::tools::PTree *__cdecl std::_Optional_base_impl<common::tools::PTree,std::_Optional_base<common::tools::PTree,false,false>>::_M_get(
+        std::_Optional_base_impl<common::tools::PTree,std::_Optional_base<common::tools::PTree,false,false> > *const this)
+{
+  return std::_Optional_payload_base<common::tools::PTree>::_M_get((std::_Optional_payload_base<common::tools::PTree> *const)this);
+};
+
+// Line 436: range 000000000F81E648-000000000F81E661
+std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > *__cdecl std::_Optional_base_impl<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,false,false>>::_M_get(
+        std::_Optional_base_impl<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,false,false> > *const this)
+{
+  return std::_Optional_payload_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>::_M_get((std::_Optional_payload_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > > *const)this);
+};
+
+// Line 436: range 000000000CE5D52A-000000000CE5D543
+std::unordered_set<unsigned int> *__cdecl std::_Optional_base_impl<std::unordered_set<unsigned int>,std::_Optional_base<std::unordered_set<unsigned int>,false,false>>::_M_get(
+        std::_Optional_base_impl<std::unordered_set<unsigned int>,std::_Optional_base<std::unordered_set<unsigned int>,false,false> > *const this)
+{
+  return std::_Optional_payload_base<std::unordered_set<unsigned int>>::_M_get((std::_Optional_payload_base<std::unordered_set<unsigned int> > *const)this);
+};
+
+// Line 443: range 0000000013C70FFA-0000000013C71013
+const unsigned int *__cdecl std::_Optional_base_impl<unsigned int,std::_Optional_base<unsigned int,true,true>>::_M_get(
+        const std::_Optional_base_impl<unsigned int,std::_Optional_base<unsigned int,true,true> > *const this)
+{
+  return std::_Optional_payload_base<unsigned int>::_M_get((const std::_Optional_payload_base<unsigned int> *const)this);
+};
+
+// Line 471: range 000000000F78BA68-000000000F78BA82
+void __cdecl std::_Optional_base<WorktopConfig,false,false>::~_Optional_base(
+        std::_Optional_base<WorktopConfig,false,false> *const this)
+{
+  std::_Optional_payload<WorktopConfig,false,false,false>::~_Optional_payload(&this->_M_payload);
+};
+
+// Line 471: range 000000000C64026A-000000000C640284
+void __cdecl std::_Optional_base<common::tools::PTree,false,false>::~_Optional_base(
+        std::_Optional_base<common::tools::PTree,false,false> *const this)
+{
+  std::_Optional_payload<common::tools::PTree,false,false,false>::~_Optional_payload(&this->_M_payload);
+};
+
+// Line 471: range 000000000F785EA8-000000000F785EC2
+void __cdecl std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,false,false>::~_Optional_base(
+        std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,false,false> *const this)
+{
+  std::_Optional_payload<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,false,false,false>::~_Optional_payload(&this->_M_payload);
+};
+
+// Line 471: range 000000000CE0CA4A-000000000CE0CA64
+void __cdecl std::_Optional_base<std::unordered_set<unsigned int>,false,false>::~_Optional_base(
+        std::_Optional_base<std::unordered_set<unsigned int>,false,false> *const this)
+{
+  std::_Optional_payload<std::unordered_set<unsigned int>,false,false,false>::~_Optional_payload(&this->_M_payload);
+};
+
+// Line 475: range 000000000F78BA4C-000000000F78BA66
+void __cdecl std::_Optional_base<WorktopConfig,false,false>::_Optional_base(
+        std::_Optional_base<WorktopConfig,false,false> *const this)
+{
+  std::_Optional_payload<WorktopConfig,false,false,false>::_Optional_payload(&this->_M_payload);
+};
+
+// Line 475: range 000000000CE0CA2E-000000000CE0CA48
+void __cdecl std::_Optional_base<std::unordered_set<unsigned int>,false,false>::_Optional_base(
+        std::_Optional_base<std::unordered_set<unsigned int>,false,false> *const this)
+{
+  std::_Optional_payload<std::unordered_set<unsigned int>,false,false,false>::_Optional_payload(&this->_M_payload);
+};
+
+// Line 475: range 0000000012F0A4BC-0000000012F0A4D6
+void __cdecl std::_Optional_base<std::vector<unsigned int>,false,false>::_Optional_base(
+        std::_Optional_base<std::vector<unsigned int>,false,false> *const this)
+{
+  std::_Optional_payload<std::vector<unsigned int>,false,false,false>::_Optional_payload(&this->_M_payload);
+};
+
+// Line 480: range 00000000148E9ED4-00000000148E9F07
+void __fastcall std::_Optional_base<std::unordered_set<unsigned int>,false,false>::_Optional_base<std::unordered_set<unsigned int> const&,false>(
+        std::_Optional_base<std::unordered_set<unsigned int>,false,false> *const this,
+        std::remove_reference<const std::unordered_set<unsigned int>&>::type *a2,
+        const std::unordered_set<unsigned int> *a3,
+        const std::unordered_set<unsigned int> *a4)
+{
+  std::unordered_set<unsigned int> *v4; // rax
+  const std::unordered_set<unsigned int> *v5; // rdx
+  const std::unordered_set<unsigned int> *v6; // rcx
+  __int64 v7; // r8
+  __int64 v8; // r9
+
+  v4 = (std::unordered_set<unsigned int> *)std::forward<std::unordered_set<unsigned int> const&>(a2);
+  ZNSt17_Optional_payloadISt13unordered_setIjSt4hashIjESt8equal_toIjESaIjEELb0ELb0ELb0EECI2St22_Optional_payload_baseIS6_EIJRKS6_EEESt10in_place_tDpOT_(
+    &this->_M_payload,
+    v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    (char)a2);
+};
+
+// Line 480: range 0000000012FBEDC8-0000000012FBEDFB
+void __fastcall std::_Optional_base<std::vector<unsigned int>,false,false>::_Optional_base<std::vector<unsigned int>,false>(
+        std::_Optional_base<std::vector<unsigned int>,false,false> *const this,
+        std::remove_reference<std::vector<unsigned int> >::type *a2,
+        std::vector<unsigned int> *a3,
+        std::vector<unsigned int> *a4)
+{
+  std::vector<unsigned int> *v4; // rax
+  std::vector<unsigned int> *v5; // rdx
+  std::vector<unsigned int> *v6; // rcx
+  __int64 v7; // r8
+  __int64 v8; // r9
+
+  v4 = std::forward<std::vector<unsigned int>>(a2);
+  ZNSt17_Optional_payloadISt6vectorIjSaIjEELb0ELb0ELb0EECI2St22_Optional_payload_baseIS2_EIJS2_EEESt10in_place_tDpOT_(
+    &this->_M_payload,
+    v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    (char)a2);
+};
+
+// Line 496: range 000000000F9D23CA-000000000F9D242D
+void __cdecl std::_Optional_base<WorktopConfig,false,false>::_Optional_base(
+        std::_Optional_base<WorktopConfig,false,false> *const this,
+        const std::_Optional_base<WorktopConfig,false,false> *__other)
+{
+  std::_Optional_base<WorktopConfig,false,false> *v2; // rcx
+  const std::_Optional_base<WorktopConfig,false,false> *v3; // rdx
+  bool *p_M_engaged; // rsi
+
+  v2 = this;
+  v3 = __other;
+  p_M_engaged = &__other->_M_payload._M_engaged;
+  if ( *(char *)(((unsigned __int64)p_M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_load1(p_M_engaged);
+  ZNSt17_Optional_payloadI13WorktopConfigLb0ELb0ELb0EECI2St22_Optional_payload_baseIS0_EEbRKS3_(
+    &v2->_M_payload,
+    __other->_M_payload._M_engaged,
+    &v3->_M_payload);
+};
+
+// Line 501: range 000000000D3D4BBE-000000000D3D4C34
+void __cdecl std::_Optional_base<std::unordered_set<unsigned int>,false,false>::_Optional_base(
+        std::_Optional_base<std::unordered_set<unsigned int>,false,false> *const this,
+        std::_Optional_base<std::unordered_set<unsigned int>,false,false> *__other)
+{
+  std::remove_reference<std::_Optional_payload<std::unordered_set<unsigned int>,false,false,false>&>::type *v2; // rsi
+
+  v2 = std::move<std::_Optional_payload<std::unordered_set<unsigned int>,false,false,false> &>(&__other->_M_payload);
+  if ( *(char *)(((unsigned __int64)&__other->_M_payload._M_engaged >> 3) + 0x7FFF8000) < 0 )
+    __asan_report_load1(&__other->_M_payload._M_engaged);
+  ZNSt17_Optional_payloadISt13unordered_setIjSt4hashIjESt8equal_toIjESaIjEELb0ELb0ELb0EECI2St22_Optional_payload_baseIS6_EEbOS9_(
+    &this->_M_payload,
+    __other->_M_payload._M_engaged,
+    v2);
+};
+
+// Line 505: range 000000000F8AB1EA-000000000F8AB1F7
+WorktopConfig *__cdecl std::_Optional_payload_base<WorktopConfig>::_M_get(
+        std::_Optional_payload_base<WorktopConfig> *const this)
+{
+  return (WorktopConfig *)this;
+};
+
+// Line 600: range 0000000012EE7234-0000000012EE724E
+void __cdecl std::_Optional_base<bool,true,true>::_Optional_base(std::_Optional_base<bool,true,true> *const this)
+{
+  std::_Optional_payload<bool,true,true,true>::_Optional_payload(&this->_M_payload);
+};
+
+// Line 600: range 0000000012F0A7B8-0000000012F0A7D2
+void __cdecl std::_Optional_base<unsigned int,true,true>::_Optional_base(
+        std::_Optional_base<unsigned int,true,true> *const this)
+{
+  std::_Optional_payload<unsigned int,true,true,true>::_Optional_payload(&this->_M_payload);
+};
+
+// Line 605: range 0000000012F77FD0-0000000012F78003
+void __fastcall std::_Optional_base<bool,true,true>::_Optional_base<bool,false>(
+        std::_Optional_base<bool,true,true> *const this,
+        std::remove_reference<bool>::type *a2,
+        bool *a3,
+        bool *a4)
+{
+  bool *v4; // rax
+  bool *v5; // rdx
+  bool *v6; // rcx
+  __int64 v7; // r8
+  __int64 v8; // r9
+
+  v4 = std::forward<bool>(a2);
+  ZNSt17_Optional_payloadIbLb1ELb1ELb1EECI2St22_Optional_payload_baseIbEIJbEEESt10in_place_tDpOT_(
+    &this->_M_payload,
+    v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    (char)a2);
+};
+
+// Line 605: range 0000000012FBEECC-0000000012FBEEFF
+void __fastcall std::_Optional_base<unsigned int,true,true>::_Optional_base<unsigned int &,false>(
+        std::_Optional_base<unsigned int,true,true> *const this,
+        std::remove_reference<unsigned int&>::type *a2,
+        unsigned int *a3,
+        unsigned int *a4)
+{
+  unsigned int *v4; // rax
+  unsigned int *v5; // rdx
+  unsigned int *v6; // rcx
+  __int64 v7; // r8
+  __int64 v8; // r9
+
+  v4 = std::forward<unsigned int &>(a2);
+  ZNSt17_Optional_payloadIjLb1ELb1ELb1EECI2St22_Optional_payload_baseIjEIJRjEEESt10in_place_tDpOT_(
+    &this->_M_payload,
+    v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    (char)a2);
+};
+
+// Line 605: range 0000000012FBEFD0-0000000012FBF003
+void __fastcall std::_Optional_base<unsigned int,true,true>::_Optional_base<unsigned int const&,false>(
+        std::_Optional_base<unsigned int,true,true> *const this,
+        std::remove_reference<unsigned int const&>::type *a2,
+        const unsigned int *a3,
+        const unsigned int *a4)
+{
+  std::remove_reference<unsigned int const&>::type *v4; // rax
+  const unsigned int *v5; // rdx
+  const unsigned int *v6; // rcx
+  __int64 v7; // r8
+  __int64 v8; // r9
+
+  v4 = (std::remove_reference<unsigned int const&>::type *)std::forward<unsigned int const&>(a2);
+  ZNSt17_Optional_payloadIjLb1ELb1ELb1EECI2St22_Optional_payload_baseIjEIJRKjEEESt10in_place_tDpOT_(
+    &this->_M_payload,
+    v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    (char)a2);
+};
+
+// Line 605: range 0000000013D4ADB8-0000000013D4ADEB
+void __fastcall std::_Optional_base<unsigned int,true,true>::_Optional_base<unsigned int,false>(
+        std::_Optional_base<unsigned int,true,true> *const this,
+        std::remove_reference<unsigned int>::type *a2,
+        unsigned int *a3,
+        unsigned int *a4)
+{
+  unsigned int *v4; // rax
+  unsigned int *v5; // rdx
+  unsigned int *v6; // rcx
+  __int64 v7; // r8
+  __int64 v8; // r9
+
+  v4 = std::forward<unsigned int>(a2);
+  ZNSt17_Optional_payloadIjLb1ELb1ELb1EECI2St22_Optional_payload_baseIjEIJjEEESt10in_place_tDpOT_(
+    &this->_M_payload,
+    v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    (char)a2);
+};
+
+// Line 656: range 000000000F9B4206-000000000F9B422B
+void __cdecl std::optional<WorktopConfig>::optional(
+        std::optional<WorktopConfig> *const this,
+        const std::optional<WorktopConfig> *a2)
+{
+  std::_Optional_base<WorktopConfig,false,false>::_Optional_base(this, a2);
+};
+
+// Line 656: range 000000000F78BAA0-000000000F78BABA
+void __cdecl std::optional<WorktopConfig>::~optional(std::optional<WorktopConfig> *const this)
+{
+  std::_Optional_base<WorktopConfig,false,false>::~_Optional_base(this);
+};
+
+// Line 656: range 000000000C640286-000000000C6402A0
+void __cdecl std::optional<common::tools::PTree>::~optional(std::optional<common::tools::PTree> *const this)
+{
+  std::_Optional_base<common::tools::PTree,false,false>::~_Optional_base(this);
+};
+
+// Line 656: range 000000000F785EC4-000000000F785EDE
+void __cdecl std::optional<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>::~optional(
+        std::optional<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > > *const this)
+{
+  std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,false,false>::~_Optional_base(this);
+};
+
+// Line 656: range 000000000D360F62-000000000D360F87
+void __cdecl std::optional<std::unordered_set<unsigned int>>::optional(
+        std::optional<std::unordered_set<unsigned int> > *const this,
+        std::optional<std::unordered_set<unsigned int> > *a2)
+{
+  std::_Optional_base<std::unordered_set<unsigned int>,false,false>::_Optional_base(this, a2);
+};
+
+// Line 656: range 000000000CE0CA82-000000000CE0CA9C
+void __cdecl std::optional<std::unordered_set<unsigned int>>::~optional(
+        std::optional<std::unordered_set<unsigned int> > *const this)
+{
+  std::_Optional_base<std::unordered_set<unsigned int>,false,false>::~_Optional_base(this);
+};
+
+// Line 688: range 000000000F78BA84-000000000F78BA9E
+void __cdecl std::optional<WorktopConfig>::optional(std::optional<WorktopConfig> *const this)
+{
+  std::_Optional_base<WorktopConfig,false,false>::_Optional_base(this);
+};
+
+// Line 688: range 000000000CE0CA66-000000000CE0CA80
+void __cdecl std::optional<std::unordered_set<unsigned int>>::optional(
+        std::optional<std::unordered_set<unsigned int> > *const this)
+{
+  std::_Optional_base<std::unordered_set<unsigned int>,false,false>::_Optional_base(this);
+};
+
+// Line 690: range 0000000012EE7250-0000000012EE726A
+void __cdecl std::optional<bool>::optional(std::optional<bool> *const this, std::nullopt_t a2)
+{
+  std::_Optional_base<bool,true,true>::_Optional_base(this);
+};
+
+// Line 690: range 00000000147FAF32-00000000147FAF4C
+void __cdecl std::optional<std::unordered_set<unsigned int>>::optional(
+        std::optional<std::unordered_set<unsigned int> > *const this,
+        std::nullopt_t a2)
+{
+  std::_Optional_base<std::unordered_set<unsigned int>,false,false>::_Optional_base(this);
+};
+
+// Line 690: range 0000000012F0A4D8-0000000012F0A4F2
+void __cdecl std::optional<std::vector<unsigned int>>::optional(
+        std::optional<std::vector<unsigned int> > *const this,
+        std::nullopt_t a2)
+{
+  std::_Optional_base<std::vector<unsigned int>,false,false>::_Optional_base(this);
+};
+
+// Line 690: range 0000000012F0A7D4-0000000012F0A7EE
+void __cdecl std::optional<unsigned int>::optional(std::optional<unsigned int> *const this, std::nullopt_t a2)
+{
+  std::_Optional_base<unsigned int,true,true>::_Optional_base(this);
+};
+
+// Line 698: range 0000000012EE726C-0000000012EE729F
+void __cdecl std::optional<bool>::optional<bool,true>(std::optional<bool> *const this, bool *__t)
+{
+  bool *v2; // rax
+  bool *v3; // rdx
+  bool *v4; // rcx
+
+  v2 = std::forward<bool>(__t);
+  std::_Optional_base<bool,true,true>::_Optional_base<bool,false>(this, v2, v3, v4);
+};
+
+// Line 698: range 00000000147FAF4E-00000000147FAF81
+void __cdecl std::optional<std::unordered_set<unsigned int>>::optional<std::unordered_set<unsigned int> const&,true>(
+        std::optional<std::unordered_set<unsigned int> > *const this,
+        const std::unordered_set<unsigned int> *__t)
+{
+  std::remove_reference<const std::unordered_set<unsigned int>&>::type *v2; // rax
+  const std::unordered_set<unsigned int> *v3; // rdx
+  const std::unordered_set<unsigned int> *v4; // rcx
+
+  v2 = (std::remove_reference<const std::unordered_set<unsigned int>&>::type *)std::forward<std::unordered_set<unsigned int> const&>((std::remove_reference<const std::unordered_set<unsigned int>&>::type *)__t);
+  std::_Optional_base<std::unordered_set<unsigned int>,false,false>::_Optional_base<std::unordered_set<unsigned int> const&,false>(
+    this,
+    v2,
+    v3,
+    v4);
+};
+
+// Line 698: range 0000000012F0A700-0000000012F0A733
+void __cdecl std::optional<std::vector<unsigned int>>::optional<std::vector<unsigned int>,true>(
+        std::optional<std::vector<unsigned int> > *const this,
+        std::vector<unsigned int> *__t)
+{
+  std::vector<unsigned int> *v2; // rax
+  std::vector<unsigned int> *v3; // rdx
+  std::vector<unsigned int> *v4; // rcx
+
+  v2 = std::forward<std::vector<unsigned int>>(__t);
+  std::_Optional_base<std::vector<unsigned int>,false,false>::_Optional_base<std::vector<unsigned int>,false>(
+    this,
+    v2,
+    v3,
+    v4);
+};
+
+// Line 698: range 0000000012F0A7F0-0000000012F0A823
+void __cdecl std::optional<unsigned int>::optional<unsigned int &,true>(
+        std::optional<unsigned int> *const this,
+        unsigned int *__t)
+{
+  unsigned int *v2; // rax
+  unsigned int *v3; // rdx
+  unsigned int *v4; // rcx
+
+  v2 = std::forward<unsigned int &>(__t);
+  std::_Optional_base<unsigned int,true,true>::_Optional_base<unsigned int &,false>(this, v2, v3, v4);
+};
+
+// Line 698: range 0000000012F0A824-0000000012F0A857
+void __cdecl std::optional<unsigned int>::optional<unsigned int const&,true>(
+        std::optional<unsigned int> *const this,
+        const unsigned int *__t)
+{
+  std::remove_reference<unsigned int const&>::type *v2; // rax
+  const unsigned int *v3; // rdx
+  const unsigned int *v4; // rcx
+
+  v2 = (std::remove_reference<unsigned int const&>::type *)std::forward<unsigned int const&>((std::remove_reference<unsigned int const&>::type *)__t);
+  std::_Optional_base<unsigned int,true,true>::_Optional_base<unsigned int const&,false>(this, v2, v3, v4);
+};
+
+// Line 698: range 0000000013C70FAC-0000000013C70FDF
+void __cdecl std::optional<unsigned int>::optional<unsigned int,true>(
+        std::optional<unsigned int> *const this,
+        unsigned int *__t)
+{
+  unsigned int *v2; // rax
+  unsigned int *v3; // rdx
+  unsigned int *v4; // rcx
+
+  v2 = std::forward<unsigned int>(__t);
+  std::_Optional_base<unsigned int,true,true>::_Optional_base<unsigned int,false>(this, v2, v3, v4);
+};
+
+// Line 786: range 000000000F7E6E48-000000000F7E6EB9
+std::enable_if_t_15 __cdecl std::optional<WorktopConfig>::operator=<WorktopConfig&>(
+        std::optional<WorktopConfig> *const this,
+        WorktopConfig *__u)
+{
+  WorktopConfig *v2; // rbx
+  WorktopConfig *v3; // rax
+  WorktopConfig *v4; // rdx
+
+  if ( std::_Optional_base_impl<WorktopConfig,std::_Optional_base<WorktopConfig,false,false>>::_M_is_engaged((const std::_Optional_base_impl<WorktopConfig,std::_Optional_base<WorktopConfig,false,false> > *const)this) )
+  {
+    v2 = std::forward<WorktopConfig &>(__u);
+    v3 = std::_Optional_base_impl<WorktopConfig,std::_Optional_base<WorktopConfig,false,false>>::_M_get((std::_Optional_base_impl<WorktopConfig,std::_Optional_base<WorktopConfig,false,false> > *const)this);
+    WorktopConfig::operator=(v3, v2);
+  }
+  else
+  {
+    v4 = std::forward<WorktopConfig &>(__u);
+    std::_Optional_base_impl<WorktopConfig,std::_Optional_base<WorktopConfig,false,false>>::_M_construct<WorktopConfig&>(
+      (std::_Optional_base_impl<WorktopConfig,std::_Optional_base<WorktopConfig,false,false> > *const)this,
+      v4,
+      v4);
+  }
+  return this;
+};
+
+// Line 786: range 000000000F7C620C-000000000F7C627D
+std::enable_if_t_16 __cdecl std::optional<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>::operator=<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>(
+        std::optional<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > > *const this,
+        std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > *__u)
+{
+  std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > *v2; // rbx
+  std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > *v3; // rax
+  std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > *v4; // rdx
+
+  if ( std::_Optional_base_impl<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,false,false>>::_M_is_engaged((const std::_Optional_base_impl<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,false,false> > *const)this) )
+  {
+    v2 = std::forward<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>(__u);
+    v3 = std::_Optional_base_impl<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,false,false>>::_M_get((std::_Optional_base_impl<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,false,false> > *const)this);
+    std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>::operator=(v3, v2);
+  }
+  else
+  {
+    v4 = std::forward<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>(__u);
+    std::_Optional_base_impl<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,false,false>>::_M_construct<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>(
+      (std::_Optional_base_impl<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,false,false> > *const)this,
+      v4,
+      v4);
+  }
+  return this;
+};
+
+// Line 786: range 000000000CE5CDB8-000000000CE5CE29
+std::enable_if_t_2 __cdecl std::optional<std::unordered_set<unsigned int>>::operator=<std::unordered_set<unsigned int>&>(
+        std::optional<std::unordered_set<unsigned int> > *const this,
+        std::unordered_set<unsigned int> *__u)
+{
+  std::unordered_set<unsigned int> *v2; // rbx
+  std::unordered_set<unsigned int> *v3; // rax
+  std::unordered_set<unsigned int> *v4; // rdx
+
+  if ( std::_Optional_base_impl<std::unordered_set<unsigned int>,std::_Optional_base<std::unordered_set<unsigned int>,false,false>>::_M_is_engaged((const std::_Optional_base_impl<std::unordered_set<unsigned int>,std::_Optional_base<std::unordered_set<unsigned int>,false,false> > *const)this) )
+  {
+    v2 = std::forward<std::unordered_set<unsigned int> &>(__u);
+    v3 = std::_Optional_base_impl<std::unordered_set<unsigned int>,std::_Optional_base<std::unordered_set<unsigned int>,false,false>>::_M_get((std::_Optional_base_impl<std::unordered_set<unsigned int>,std::_Optional_base<std::unordered_set<unsigned int>,false,false> > *const)this);
+    std::unordered_set<unsigned int>::operator=(v3, v2);
+  }
+  else
+  {
+    v4 = std::forward<std::unordered_set<unsigned int> &>(__u);
+    std::_Optional_base_impl<std::unordered_set<unsigned int>,std::_Optional_base<std::unordered_set<unsigned int>,false,false>>::_M_construct<std::unordered_set<unsigned int>&>(
+      (std::_Optional_base_impl<std::unordered_set<unsigned int>,std::_Optional_base<std::unordered_set<unsigned int>,false,false> > *const)this,
+      v4,
+      v4);
+  }
+  return this;
+};
+
+// Line 820: range 000000000F884488-000000000F884495
+std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > *__cdecl std::_Optional_payload_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>::_M_get(
+        std::_Optional_payload_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > > *const this)
+{
+  return (std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > *)this;
+};
+
+// Line 897: range 0000000013C70FE0-0000000013C70FF9
+const unsigned int *__cdecl std::optional<unsigned int>::operator*(const std::optional<unsigned int> *const this)
+{
+  return std::_Optional_base_impl<unsigned int,std::_Optional_base<unsigned int,true,true>>::_M_get((const std::_Optional_base_impl<unsigned int,std::_Optional_base<unsigned int,true,true> > *const)this);
+};
+
+// Line 912: range 000000000CE5D510-000000000CE5D529
+bool __cdecl std::optional<std::unordered_set<unsigned int>>::operator bool(
+        const std::optional<std::unordered_set<unsigned int> > *const this)
+{
+  return std::_Optional_base_impl<std::unordered_set<unsigned int>,std::_Optional_base<std::unordered_set<unsigned int>,false,false>>::_M_is_engaged((const std::_Optional_base_impl<std::unordered_set<unsigned int>,std::_Optional_base<std::unordered_set<unsigned int>,false,false> > *const)this);
+};
+
+// Line 912: range 0000000013C70F92-0000000013C70FAB
+bool __cdecl std::optional<unsigned int>::operator bool(const std::optional<unsigned int> *const this)
+{
+  return std::_Optional_base_impl<unsigned int,std::_Optional_base<unsigned int,true,true>>::_M_is_engaged((const std::_Optional_base_impl<unsigned int,std::_Optional_base<unsigned int,true,true> > *const)this);
+};
+
+// Line 915: range 000000000CEC8E68-000000000CEC8E81
+bool __cdecl std::optional<WorktopConfig>::has_value(const std::optional<WorktopConfig> *const this)
+{
+  return std::_Optional_base_impl<WorktopConfig,std::_Optional_base<WorktopConfig,false,false>>::_M_is_engaged((const std::_Optional_base_impl<WorktopConfig,std::_Optional_base<WorktopConfig,false,false> > *const)this);
+};
+
+// Line 915: range 000000000C65B46C-000000000C65B485
+bool __cdecl std::optional<common::tools::PTree>::has_value(const std::optional<common::tools::PTree> *const this)
+{
+  return std::_Optional_base_impl<common::tools::PTree,std::_Optional_base<common::tools::PTree,false,false>>::_M_is_engaged((const std::_Optional_base_impl<common::tools::PTree,std::_Optional_base<common::tools::PTree,false,false> > *const)this);
+};
+
+// Line 915: range 000000000F785EE0-000000000F785EF9
+bool __cdecl std::optional<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>::has_value(
+        const std::optional<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > > *const this)
+{
+  return std::_Optional_base_impl<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,false,false>>::_M_is_engaged((const std::_Optional_base_impl<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,false,false> > *const)this);
+};
+
+// Line 915: range 000000000F05F698-000000000F05F6B1
+bool __cdecl std::optional<std::unordered_set<unsigned int>>::has_value(
+        const std::optional<std::unordered_set<unsigned int> > *const this)
+{
+  return std::_Optional_base_impl<std::unordered_set<unsigned int>,std::_Optional_base<std::unordered_set<unsigned int>,false,false>>::_M_is_engaged((const std::_Optional_base_impl<std::unordered_set<unsigned int>,std::_Optional_base<std::unordered_set<unsigned int>,false,false> > *const)this);
+};
+
+// Line 916: range 000000000C65B486-000000000C65B4A7
+common::tools::PTree *__cdecl std::optional<common::tools::PTree>::operator->(
+        std::optional<common::tools::PTree> *const this)
+{
+  common::tools::PTree *v1; // rax
+
+  v1 = std::_Optional_base_impl<common::tools::PTree,std::_Optional_base<common::tools::PTree,false,false>>::_M_get((std::_Optional_base_impl<common::tools::PTree,std::_Optional_base<common::tools::PTree,false,false> > *const)this);
+  return std::__addressof<common::tools::PTree>(v1);
+};
+
+// Line 927: range 000000000CEC2180-000000000CEC21B5
+common::tools::PTree *__cdecl std::optional<common::tools::PTree>::value(
+        std::optional<common::tools::PTree> *const this)
+{
+  if ( !std::_Optional_base_impl<common::tools::PTree,std::_Optional_base<common::tools::PTree,false,false>>::_M_is_engaged((const std::_Optional_base_impl<common::tools::PTree,std::_Optional_base<common::tools::PTree,false,false> > *const)this) )
+  {
+    __asan_handle_no_return(this);
+    std::__throw_bad_optional_access();
+  }
+  return std::_Optional_base_impl<common::tools::PTree,std::_Optional_base<common::tools::PTree,false,false>>::_M_get((std::_Optional_base_impl<common::tools::PTree,std::_Optional_base<common::tools::PTree,false,false> > *const)this);
+};
+
+// Line 927: range 000000000F7C6186-000000000F7C61BB
+std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > *__cdecl std::optional<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>>::value(
+        std::optional<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> > > *const this)
+{
+  if ( !std::_Optional_base_impl<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,false,false>>::_M_is_engaged((const std::_Optional_base_impl<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,false,false> > *const)this) )
+  {
+    __asan_handle_no_return(this);
+    std::__throw_bad_optional_access();
+  }
+  return std::_Optional_base_impl<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>>>,false,false>>::_M_get((std::_Optional_base_impl<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,std::_Optional_base<std::pair<unsigned int,std::vector<std::pair<unsigned int,bool>> >,false,false> > *const)this);
+};
+
+// Line 927: range 000000000CE0CC48-000000000CE0CC7D
+std::unordered_set<unsigned int> *__cdecl std::optional<std::unordered_set<unsigned int>>::value(
+        std::optional<std::unordered_set<unsigned int> > *const this)
+{
+  if ( !std::_Optional_base_impl<std::unordered_set<unsigned int>,std::_Optional_base<std::unordered_set<unsigned int>,false,false>>::_M_is_engaged((const std::_Optional_base_impl<std::unordered_set<unsigned int>,std::_Optional_base<std::unordered_set<unsigned int>,false,false> > *const)this) )
+  {
+    __asan_handle_no_return(this);
+    std::__throw_bad_optional_access();
+  }
+  return std::_Optional_base_impl<std::unordered_set<unsigned int>,std::_Optional_base<std::unordered_set<unsigned int>,false,false>>::_M_get((std::_Optional_base_impl<std::unordered_set<unsigned int>,std::_Optional_base<std::unordered_set<unsigned int>,false,false> > *const)this);
+};
+
+// Line 1107: range 0000000013C71070-0000000013C7112E
+std::__optional_relop_t __cdecl std::operator!=<unsigned int,unsigned int>(
+        const std::optional<unsigned int> *__lhs,
+        const unsigned int *__rhs)
+{
+  unsigned int *v2; // rax
+  int *v3; // rdx
+  int v4; // ecx
+
+  if ( !std::optional<unsigned int>::operator bool(__lhs) )
+    return 1;
+  v2 = (unsigned int *)std::optional<unsigned int>::operator*(__lhs);
+  v3 = (int *)v2;
+  if ( *(_BYTE *)(((unsigned __int64)v2 >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)v2 & 7) + 3) >= *(_BYTE *)(((unsigned __int64)v2 >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_load4(v2);
+  }
+  v4 = *v3;
+  if ( *(_BYTE *)(((unsigned __int64)__rhs >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)__rhs & 7) + 3) >= *(_BYTE *)(((unsigned __int64)__rhs >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_load4(__rhs);
+  }
+  return v4 != *__rhs;
+};

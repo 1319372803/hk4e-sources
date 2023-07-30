@@ -1,0 +1,42 @@
+// File: /opt/tool/gcc-9.1.0/include/c++/9.1.0/chrono
+
+// Line 92: range 0000000000C48228-0000000000C48A01
+bool __fastcall std::chrono::operator<<std::chrono::_V2::steady_clock,std::chrono::duration<long,std::ratio<1l,1000000000l>>,std::chrono::duration<long,std::ratio<1l,1000000000l>>>(
+        const std::chrono::time_point<std::chrono::_V2::steady_clock,std::chrono::duration<long int,std::ratio<1,1000000000> > > *__lhs,
+        const std::chrono::time_point<std::chrono::_V2::steady_clock,std::chrono::duration<long int,std::ratio<1,1000000000> > > *__rhs)
+{
+  if ( *(_BYTE *)(((unsigned __int64)__rhs >> 3) + 0x7FFF8000) )
+  {
+    __lhs = __rhs;
+    __asan_report_load8(__rhs);
+    goto LABEL_5;
+  }
+  if ( *(_BYTE *)(((unsigned __int64)__lhs >> 3) + 0x7FFF8000) )
+  {
+LABEL_5:
+    __asan_report_load8(__lhs);
+    JUMPOUT(0xC48267LL);
+  }
+  return __lhs->__d.__r < __rhs->__d.__r;
+};
+
+// Line 762: range 0000000000C48A02-0000000000C49222
+std::__success_type<std::chrono::duration<long int,std::ratio<1,1000000000> > >::type __fastcall std::chrono::operator-<std::chrono::_V2::steady_clock,std::chrono::duration<long,std::ratio<1l,1000000000l>>,std::chrono::duration<long,std::ratio<1l,1000000000l>>>(
+        const std::chrono::time_point<std::chrono::_V2::steady_clock,std::chrono::duration<long int,std::ratio<1,1000000000> > > *__lhs,
+        const std::chrono::time_point<std::chrono::_V2::steady_clock,std::chrono::duration<long int,std::ratio<1,1000000000> > > *__rhs)
+{
+  if ( *(_BYTE *)(((unsigned __int64)__rhs >> 3) + 0x7FFF8000) )
+  {
+    __lhs = __rhs;
+    __asan_report_load8(__rhs);
+    goto LABEL_5;
+  }
+  if ( *(_BYTE *)(((unsigned __int64)__lhs >> 3) + 0x7FFF8000) )
+  {
+LABEL_5:
+    __asan_report_load8(__lhs);
+    JUMPOUT(0xC48A41LL);
+  }
+  return (std::__success_type<std::chrono::duration<long int,std::ratio<1,1000000000> > >::type)(__lhs->__d.__r
+                                                                                               - __rhs->__d.__r);
+};

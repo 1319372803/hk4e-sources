@@ -1,0 +1,46 @@
+// File: /opt/tool/gcc-9.1.0/include/c++/9.1.0/shared_mutex
+
+// Line 71: range 000000000C5E7458-000000000C5E7486
+int __cdecl std::__glibcxx_rwlock_rdlock(pthread_rwlock_t *__rwlock);
+
+// Line 73: range 000000000C5E7487-000000000C5E74B5
+int __cdecl std::__glibcxx_rwlock_wrlock(pthread_rwlock_t *__rwlock);
+
+// Line 74: range 000000000C688170-000000000C6881FD
+void __cdecl std::shared_lock<std::shared_mutex>::shared_lock(std::shared_lock<std::shared_mutex> *const this, std::shared_lock<std::shared_mutex>::mutex_type *__m);
+
+// Line 75: range 000000000C5E74B6-000000000C5E74E4
+int __cdecl std::__glibcxx_rwlock_unlock(pthread_rwlock_t *__rwlock);
+
+// Line 153: range 000000000C66DACA-000000000C66DB77
+void __cdecl std::__shared_mutex_pthread::__shared_mutex_pthread(std::__shared_mutex_pthread *const this);
+
+// Line 184: range 000000000C5E74E6-000000000C5E7518
+void __cdecl std::__shared_mutex_pthread::lock(std::__shared_mutex_pthread *const this);
+
+// Line 204: range 000000000C5E751A-000000000C5E7537
+void __cdecl std::__shared_mutex_pthread::unlock(std::__shared_mutex_pthread *const this);
+
+// Line 214: range 000000000C5E7538-000000000C5E7572
+void __cdecl std::__shared_mutex_pthread::lock_shared(std::__shared_mutex_pthread *const this);
+
+// Line 244: range 000000000C5E7574-000000000C5E758E
+void __cdecl std::__shared_mutex_pthread::unlock_shared(std::__shared_mutex_pthread *const this);
+
+// Line 404: range 000000000C66DB78-000000000C66DB92
+void __cdecl std::shared_mutex::shared_mutex(std::shared_mutex *const this);
+
+// Line 412: range 000000000C5E7590-000000000C5E75AA
+void __cdecl std::shared_mutex::lock(std::shared_mutex *const this);
+
+// Line 414: range 000000000C5E75AC-000000000C5E75C6
+void __cdecl std::shared_mutex::unlock(std::shared_mutex *const this);
+
+// Line 418: range 000000000C5E75C8-000000000C5E75E2
+void __cdecl std::shared_mutex::lock_shared(std::shared_mutex *const this);
+
+// Line 420: range 000000000C5E75E4-000000000C5E75FE
+void __cdecl std::shared_mutex::unlock_shared(std::shared_mutex *const this);
+
+// Line 659: range 000000000C6881FE-000000000C68827B
+void __cdecl std::shared_lock<std::shared_mutex>::~shared_lock(std::shared_lock<std::shared_mutex> *const this);

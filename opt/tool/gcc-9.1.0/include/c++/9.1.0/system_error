@@ -1,0 +1,215 @@
+// File: /opt/tool/gcc-9.1.0/include/c++/9.1.0/system_error
+
+// Line 77: range 000000000C6391A6-000000000C6391E7
+void __cdecl std::_V2::error_category::error_category(std::_V2::error_category *const this)
+{
+  char *v1; // rdx
+
+  v1 = (char *)&`vtable for'std::_V2::error_category + 16;
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+    __asan_report_store8();
+  *(_QWORD *)this = v1;
+};
+
+// Line 125: range 000000000C634E2A-000000000C634E42
+bool __cdecl std::_V2::error_category::operator==(
+        const std::_V2::error_category *const this,
+        const std::_V2::error_category *__other)
+{
+  return this == __other;
+};
+
+// Line 148: range 000000000F775670-000000000F7756E9
+void __cdecl std::error_code::error_code(std::error_code *const this)
+{
+  const std::_V2::error_category *v1; // rax
+
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) != 0
+    && *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) <= 3 )
+  {
+    __asan_report_store4(this);
+  }
+  this->_M_value = 0;
+  v1 = (const std::_V2::error_category *)std::_V2::system_category((std::_V2 *)this);
+  if ( *(_BYTE *)(((unsigned __int64)&this->_M_cat >> 3) + 0x7FFF8000) )
+    __asan_report_store8();
+  this->_M_cat = v1;
+};
+
+// Line 151: range 000000000C634E44-000000000C634EC2
+void __cdecl std::error_code::error_code(std::error_code *const this, int __v, const std::_V2::error_category *__cat)
+{
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) != 0
+    && *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) <= 3 )
+  {
+    __asan_report_store4(this);
+  }
+  this->_M_value = __v;
+  if ( *(_BYTE *)(((unsigned __int64)&this->_M_cat >> 3) + 0x7FFF8000) )
+    __asan_report_store8();
+  this->_M_cat = __cat;
+};
+
+// Line 178: range 000000000C634EC4-000000000C634F06
+int __cdecl std::error_code::value(const std::error_code *const this)
+{
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) != 0
+    && *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) <= 3 )
+  {
+    __asan_report_load4(this);
+  }
+  return this->_M_value;
+};
+
+// Line 181: range 000000000C634F08-000000000C634F42
+const std::_V2::error_category *__cdecl std::error_code::category(const std::error_code *const this)
+{
+  if ( *(_BYTE *)(((unsigned __int64)&this->_M_cat >> 3) + 0x7FFF8000) )
+    __asan_report_load8(&this->_M_cat);
+  return this->_M_cat;
+};
+
+// Line 188: range 000000000C634F44-000000000C63503F
+std::string *__cdecl std::error_code::message[abi:cxx11](std::string *retstr, const std::error_code *const this)
+{
+  const std::_V2::error_category *v2; // rax
+  _QWORD *v3; // rbx
+  unsigned __int64 v4; // rax
+  void (__fastcall *v5)(std::string *, _QWORD *, _QWORD); // r12
+  unsigned int v6; // esi
+
+  v2 = std::error_code::category(this);
+  v3 = v2;
+  if ( *(_BYTE *)(((unsigned __int64)v2 >> 3) + 0x7FFF8000) )
+    __asan_report_load8(v2);
+  v4 = *v3 + 32LL;
+  if ( *(_BYTE *)((v4 >> 3) + 0x7FFF8000) )
+    v4 = __asan_report_load8(*v3 + 32LL);
+  v5 = *(void (__fastcall **)(std::string *, _QWORD *, _QWORD))v4;
+  v6 = std::error_code::value(this);
+  if ( *(char *)(((unsigned __int64)retstr >> 3) + 0x7FFF8000) < 0
+    || *(_BYTE *)((((unsigned __int64)&retstr->_anon_0._M_allocated_capacity + 15) >> 3) + 0x7FFF8000) != 0
+    && (((unsigned __int8)retstr + 31) & 7) >= *(_BYTE *)((((unsigned __int64)&retstr->_anon_0._M_allocated_capacity + 15) >> 3)
+                                                        + 0x7FFF8000) )
+  {
+    v6 = 32;
+    __asan_report_store_n(retstr, 32LL);
+  }
+  v5(retstr, v3, v6);
+  return retstr;
+};
+
+// Line 229: range 000000000C635040-000000000C6350BE
+void __cdecl std::error_condition::error_condition(
+        std::error_condition *const this,
+        int __v,
+        const std::_V2::error_category *__cat)
+{
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) != 0
+    && *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) <= 3 )
+  {
+    __asan_report_store4(this);
+  }
+  this->_M_value = __v;
+  if ( *(_BYTE *)(((unsigned __int64)&this->_M_cat >> 3) + 0x7FFF8000) )
+    __asan_report_store8();
+  this->_M_cat = __cat;
+};
+
+// Line 257: range 000000000C6350C0-000000000C635102
+int __cdecl std::error_condition::value(const std::error_condition *const this)
+{
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) != 0
+    && *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) <= 3 )
+  {
+    __asan_report_load4(this);
+  }
+  return this->_M_value;
+};
+
+// Line 260: range 000000000C635104-000000000C63513E
+const std::_V2::error_category *__cdecl std::error_condition::category(const std::error_condition *const this)
+{
+  if ( *(_BYTE *)(((unsigned __int64)&this->_M_cat >> 3) + 0x7FFF8000) )
+    __asan_report_load8(&this->_M_cat);
+  return this->_M_cat;
+};
+
+// Line 313: range 000000000C63513F-000000000C6351AA
+bool __cdecl std::operator==(const std::error_condition *__lhs, const std::error_condition *__rhs)
+{
+  const std::_V2::error_category *v2; // rbx
+  const std::_V2::error_category *v3; // rax
+  int v4; // ebx
+  bool result; // al
+
+  v2 = std::error_condition::category(__rhs);
+  v3 = std::error_condition::category(__lhs);
+  result = 0;
+  if ( std::_V2::error_category::operator==(v3, v2) )
+  {
+    v4 = std::error_condition::value(__lhs);
+    if ( v4 == std::error_condition::value(__rhs) )
+      return 1;
+  }
+  return result;
+};
+
+// Line 353: range 000000000C6351AC-000000000C6353FB
+// local variable allocation has failed, the output may be wrong!
+void __fastcall std::system_error::system_error(unsigned __int64 this, std::error_code __ec, const char *__what)
+{
+  unsigned int v3; // esi
+  unsigned __int64 v4; // rbx
+  __int64 v5; // rax
+  unsigned __int64 v6; // r12
+  char *v7; // rdx
+  const std::_V2::error_category *v8; // rdx
+  const std::_V2::error_category *M_cat; // [rsp+8h] [rbp-E8h]
+  std::string v11; // [rsp+20h] [rbp-D0h] BYREF
+  std::string v12; // [rsp+40h] [rbp-B0h] BYREF
+  std::string __rhs; // [rsp+60h] [rbp-90h] BYREF
+  char v14[112]; // [rsp+80h] [rbp-70h] BYREF
+
+  M_cat = __ec._M_cat;
+  v4 = (unsigned __int64)v14;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v5 = __asan_stack_malloc_0(64LL);
+    if ( v5 )
+      v4 = v5;
+  }
+  *(_QWORD *)v4 = 1102416563LL;
+  *(_QWORD *)(v4 + 8) = "1 32 16 8 __ec:353";
+  *(_QWORD *)(v4 + 16) = std::system_error::system_error;
+  v6 = v4 >> 3;
+  *(_DWORD *)(v6 + 2147450880) = -235802127;
+  *(_DWORD *)(v6 + 2147450884) = -202178560;
+  *(_QWORD *)(v4 + 32) = v3;
+  *(_QWORD *)(v4 + 40) = M_cat;
+  std::error_code::message[abi:cxx11](&__rhs, (const std::error_code *const)(v4 + 32));
+  std::operator+<char>(&v12, ": ", &__rhs);
+  std::operator+<char>(&v11, __what, &v12);
+  std::runtime_error::runtime_error(this, &v11);
+  std::string::~string(&v11);
+  std::string::~string(&v12);
+  std::string::~string(&__rhs);
+  v7 = (char *)&`vtable for'std::system_error + 16;
+  if ( *(_BYTE *)((this >> 3) + 0x7FFF8000) )
+    __asan_report_store8();
+  *(_QWORD *)this = v7;
+  if ( *(_WORD *)(((this + 16) >> 3) + 0x7FFF8000) )
+    __asan_report_store16(this + 16);
+  v8 = *(const std::_V2::error_category **)(v4 + 40);
+  *(_QWORD *)(this + 16) = *(_QWORD *)(v4 + 32);
+  *(_QWORD *)(this + 24) = v8;
+  if ( v14 == (char *)v4 )
+  {
+    *(_QWORD *)((v4 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v4 = 1172321806LL;
+    *(_QWORD *)((v4 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};

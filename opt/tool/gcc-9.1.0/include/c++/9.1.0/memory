@@ -1,0 +1,28 @@
+// File: /opt/tool/gcc-9.1.0/include/c++/9.1.0/memory
+
+// Line 119: range 000000000C6355FD-000000000C635714
+void *__cdecl std::align(std::size_t __align, std::size_t __size, void **__ptr, std::size_t *__space)
+{
+  std::size_t v4; // rcx
+  void *v6; // rdx
+  unsigned __int64 __aligned; // [rsp+30h] [rbp-10h]
+  unsigned __int64 __diff; // [rsp+38h] [rbp-8h]
+
+  if ( *(_BYTE *)(((unsigned __int64)__ptr >> 3) + 0x7FFF8000) )
+    __asan_report_load8(__ptr);
+  __aligned = ((unsigned __int64)*__ptr + __align - 1) & -(__int64)__align;
+  __diff = __aligned - (_QWORD)*__ptr;
+  v4 = __size + __diff;
+  if ( *(_BYTE *)(((unsigned __int64)__space >> 3) + 0x7FFF8000) )
+    __asan_report_load8(__space);
+  if ( v4 > *__space )
+    return 0LL;
+  if ( *(_BYTE *)(((unsigned __int64)__space >> 3) + 0x7FFF8000) )
+    __asan_report_load8(__space);
+  *__space -= __diff;
+  v6 = (void *)__aligned;
+  if ( *(_BYTE *)(((unsigned __int64)__ptr >> 3) + 0x7FFF8000) )
+    __asan_report_store8();
+  *__ptr = v6;
+  return *__ptr;
+};

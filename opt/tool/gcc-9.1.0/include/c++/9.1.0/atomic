@@ -1,0 +1,807 @@
+// File: /opt/tool/gcc-9.1.0/include/c++/9.1.0/atomic
+
+// Line 77: range 000000000C78FF9C-000000000C78FFC1
+void __cdecl std::atomic<bool>::atomic(std::atomic<bool> *const this, bool __i)
+{
+  std::__atomic_base<bool>::__atomic_base(&this->_M_base, __i);
+};
+
+// Line 104: range 000000000C78FFC2-000000000C790048
+void __cdecl std::atomic<bool>::store(std::atomic<bool> *const this, bool __i, std::memory_order_0 __m)
+{
+  char v3; // di
+  std::atomic<bool> *v4; // rdx
+
+  std::operator&(__m, __memory_order_mask);
+  v3 = __i;
+  v4 = this;
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) != 0
+    && ((unsigned __int8)this & 7) >= *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+  {
+    v3 = (char)this;
+    __asan_report_store1(this);
+  }
+  v4->_M_base._M_i = v3;
+  _mm_mfence();
+};
+
+// Line 112: range 000000000C79004A-000000000C7900BA
+bool __cdecl std::atomic<bool>::load(const std::atomic<bool> *const this, std::memory_order_0 __m)
+{
+  const std::atomic<bool> *v2; // rdx
+
+  std::operator&(__m, __memory_order_mask);
+  v2 = this;
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) != 0
+    && ((unsigned __int8)this & 7) >= *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_load1(this);
+  }
+  return v2->_M_base._M_i;
+};
+
+// Line 204: range 000000000C7A7C5E-000000000C7A7CAF
+void __cdecl std::atomic<ServiceBase::Status>::atomic(
+        std::atomic<ServiceBase::Status> *const this,
+        ServiceBase::Status __i)
+{
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)this & 7) + 3) >= *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store4(this);
+  }
+  this->_M_i = __i;
+};
+
+// Line 204: range 000000000C821E34-000000000C821E85
+void __cdecl std::atomic<common::minet::AClientMgr<DispatchConnect>::Status>::atomic(
+        std::atomic<common::minet::AClientMgr<DispatchConnect>::Status> *const this,
+        common::minet::AClientMgr<DispatchConnect>::Status __i)
+{
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)this & 7) + 3) >= *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store4(this);
+  }
+  this->_M_i = __i;
+};
+
+// Line 204: range 000000000C821920-000000000C821971
+void __cdecl std::atomic<common::minet::AClientMgr<GameserverConnect>::Status>::atomic(
+        std::atomic<common::minet::AClientMgr<GameserverConnect>::Status> *const this,
+        common::minet::AClientMgr<GameserverConnect>::Status __i)
+{
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)this & 7) + 3) >= *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store4(this);
+  }
+  this->_M_i = __i;
+};
+
+// Line 204: range 000000000C822348-000000000C822399
+void __cdecl std::atomic<common::minet::AClientMgr<PathfindingserverConnect>::Status>::atomic(
+        std::atomic<common::minet::AClientMgr<PathfindingserverConnect>::Status> *const this,
+        common::minet::AClientMgr<PathfindingserverConnect>::Status __i)
+{
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)this & 7) + 3) >= *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store4(this);
+  }
+  this->_M_i = __i;
+};
+
+// Line 204: range 000000000C82285C-000000000C8228AD
+void __cdecl std::atomic<common::minet::AClientMgr<TothemoonserverConnect>::Status>::atomic(
+        std::atomic<common::minet::AClientMgr<TothemoonserverConnect>::Status> *const this,
+        common::minet::AClientMgr<TothemoonserverConnect>::Status __i)
+{
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)this & 7) + 3) >= *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store4(this);
+  }
+  this->_M_i = __i;
+};
+
+// Line 204: range 000000000C7C1BAC-000000000C7C1BFD
+void __cdecl std::atomic<common::minet::http_client::HttpClientMgr::Status>::atomic(
+        std::atomic<common::minet::http_client::HttpClientMgr::Status> *const this,
+        common::minet::http_client::HttpClientMgr::Status __i)
+{
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)this & 7) + 3) >= *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store4(this);
+  }
+  this->_M_i = __i;
+};
+
+// Line 206: range 000000000C7A8450-000000000C7A846E
+ServiceBase::Status __cdecl std::atomic<ServiceBase::Status>::operator ServiceBase::Status(
+        const std::atomic<ServiceBase::Status> *const this)
+{
+  return std::atomic<ServiceBase::Status>::load(this, memory_order_seq_cst);
+};
+
+// Line 206: range 000000000C7ABDF8-000000000C7ABE16
+common::minet::AClientConnect::Status __cdecl std::atomic<common::minet::AClientConnect::Status>::operator common::minet::AClientConnect::Status(
+        const std::atomic<common::minet::AClientConnect::Status> *const this)
+{
+  return std::atomic<common::minet::AClientConnect::Status>::load(this, memory_order_seq_cst);
+};
+
+// Line 206: range 000000000C865B5E-000000000C865B7C
+common::minet::AClientMgr<DispatchConnect>::Status __cdecl std::atomic<common::minet::AClientMgr<DispatchConnect>::Status>::operator common::minet::AClientMgr<DispatchConnect>::Status(
+        const std::atomic<common::minet::AClientMgr<DispatchConnect>::Status> *const this)
+{
+  return std::atomic<common::minet::AClientMgr<DispatchConnect>::Status>::load(this, memory_order_seq_cst);
+};
+
+// Line 206: range 000000000C7CD574-000000000C7CD592
+common::minet::AClientMgr<GameserverConnect>::Status __cdecl std::atomic<common::minet::AClientMgr<GameserverConnect>::Status>::operator common::minet::AClientMgr<GameserverConnect>::Status(
+        const std::atomic<common::minet::AClientMgr<GameserverConnect>::Status> *const this)
+{
+  return std::atomic<common::minet::AClientMgr<GameserverConnect>::Status>::load(this, memory_order_seq_cst);
+};
+
+// Line 206: range 000000000C7CDE9C-000000000C7CDEBA
+common::minet::AClientMgr<PathfindingserverConnect>::Status __cdecl std::atomic<common::minet::AClientMgr<PathfindingserverConnect>::Status>::operator common::minet::AClientMgr<PathfindingserverConnect>::Status(
+        const std::atomic<common::minet::AClientMgr<PathfindingserverConnect>::Status> *const this)
+{
+  return std::atomic<common::minet::AClientMgr<PathfindingserverConnect>::Status>::load(this, memory_order_seq_cst);
+};
+
+// Line 206: range 000000000C7CE1B8-000000000C7CE1D6
+common::minet::AClientMgr<TothemoonserverConnect>::Status __cdecl std::atomic<common::minet::AClientMgr<TothemoonserverConnect>::Status>::operator common::minet::AClientMgr<TothemoonserverConnect>::Status(
+        const std::atomic<common::minet::AClientMgr<TothemoonserverConnect>::Status> *const this)
+{
+  return std::atomic<common::minet::AClientMgr<TothemoonserverConnect>::Status>::load(this, memory_order_seq_cst);
+};
+
+// Line 213: range 000000000C865CFC-000000000C865D25
+common::minet::AClientMgr<DispatchConnect>::Status __cdecl std::atomic<common::minet::AClientMgr<DispatchConnect>::Status>::operator=(
+        std::atomic<common::minet::AClientMgr<DispatchConnect>::Status> *const this,
+        common::minet::AClientMgr<DispatchConnect>::Status __i)
+{
+  std::atomic<common::minet::AClientMgr<DispatchConnect>::Status>::store(this, __i, memory_order_seq_cst);
+  return __i;
+};
+
+// Line 213: range 000000000C7CDE3E-000000000C7CDE67
+common::minet::AClientMgr<GameserverConnect>::Status __cdecl std::atomic<common::minet::AClientMgr<GameserverConnect>::Status>::operator=(
+        std::atomic<common::minet::AClientMgr<GameserverConnect>::Status> *const this,
+        common::minet::AClientMgr<GameserverConnect>::Status __i)
+{
+  std::atomic<common::minet::AClientMgr<GameserverConnect>::Status>::store(this, __i, memory_order_seq_cst);
+  return __i;
+};
+
+// Line 213: range 000000000C7CE174-000000000C7CE19D
+common::minet::AClientMgr<PathfindingserverConnect>::Status __cdecl std::atomic<common::minet::AClientMgr<PathfindingserverConnect>::Status>::operator=(
+        std::atomic<common::minet::AClientMgr<PathfindingserverConnect>::Status> *const this,
+        common::minet::AClientMgr<PathfindingserverConnect>::Status __i)
+{
+  std::atomic<common::minet::AClientMgr<PathfindingserverConnect>::Status>::store(this, __i, memory_order_seq_cst);
+  return __i;
+};
+
+// Line 213: range 000000000C7CE490-000000000C7CE4B9
+common::minet::AClientMgr<TothemoonserverConnect>::Status __cdecl std::atomic<common::minet::AClientMgr<TothemoonserverConnect>::Status>::operator=(
+        std::atomic<common::minet::AClientMgr<TothemoonserverConnect>::Status> *const this,
+        common::minet::AClientMgr<TothemoonserverConnect>::Status __i)
+{
+  std::atomic<common::minet::AClientMgr<TothemoonserverConnect>::Status>::store(this, __i, memory_order_seq_cst);
+  return __i;
+};
+
+// Line 242: range 000000000C86D780-000000000C86D8D2
+void __fastcall std::atomic<common::minet::AClientMgr<DispatchConnect>::Status>::store(
+        std::atomic<common::minet::AClientMgr<DispatchConnect>::Status> *const this,
+        common::minet::AClientMgr<DispatchConnect>::Status __i,
+        std::memory_order_0 __m)
+{
+  unsigned __int64 v3; // rbx
+  __int64 v4; // rax
+  unsigned __int64 v5; // r12
+  common::minet::AClientMgr<DispatchConnect>::Status *v6; // rax
+  int *v7; // rdx
+  int v8; // r13d
+  common::minet::AClientMgr<DispatchConnect>::Status *v9; // rax
+  _DWORD *v10; // rdx
+  char v11[96]; // [rsp+10h] [rbp-60h] BYREF
+
+  v3 = (unsigned __int64)v11;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v4 = __asan_stack_malloc_0(64LL);
+    if ( v4 )
+      v3 = v4;
+  }
+  *(_QWORD *)v3 = 1102416563LL;
+  *(_QWORD *)(v3 + 8) = "1 32 4 7 __i:242";
+  *(_QWORD *)(v3 + 16) = std::atomic<common::minet::AClientMgr<DispatchConnect>::Status>::store;
+  v5 = v3 >> 3;
+  *(_DWORD *)(v5 + 2147450880) = -235802127;
+  *(_DWORD *)(v5 + 2147450884) = -202116348;
+  *(_DWORD *)(v3 + 32) = __i;
+  v6 = std::__addressof<common::minet::AClientMgr<DispatchConnect>::Status>((common::minet::AClientMgr<DispatchConnect>::Status *)(v3 + 32));
+  v7 = (int *)v6;
+  if ( *(_BYTE *)(((unsigned __int64)v6 >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)v6 & 7) + 3) >= *(_BYTE *)(((unsigned __int64)v6 >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_load4(v6);
+  }
+  v8 = *v7;
+  v9 = std::__addressof<common::minet::AClientMgr<DispatchConnect>::Status>(&this->_M_i);
+  v10 = v9;
+  if ( *(_BYTE *)(((unsigned __int64)v9 >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)v9 & 7) + 3) >= *(_BYTE *)(((unsigned __int64)v9 >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store4(v9);
+  }
+  *v10 = v8;
+  _mm_mfence();
+  if ( v11 == (char *)v3 )
+  {
+    *(_QWORD *)((v3 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v3 = 1172321806LL;
+    *(_QWORD *)((v3 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 242: range 000000000C7E33FE-000000000C7E3550
+void __fastcall std::atomic<common::minet::AClientMgr<GameserverConnect>::Status>::store(
+        std::atomic<common::minet::AClientMgr<GameserverConnect>::Status> *const this,
+        common::minet::AClientMgr<GameserverConnect>::Status __i,
+        std::memory_order_0 __m)
+{
+  unsigned __int64 v3; // rbx
+  __int64 v4; // rax
+  unsigned __int64 v5; // r12
+  common::minet::AClientMgr<GameserverConnect>::Status *v6; // rax
+  int *v7; // rdx
+  int v8; // r13d
+  common::minet::AClientMgr<GameserverConnect>::Status *v9; // rax
+  _DWORD *v10; // rdx
+  char v11[96]; // [rsp+10h] [rbp-60h] BYREF
+
+  v3 = (unsigned __int64)v11;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v4 = __asan_stack_malloc_0(64LL);
+    if ( v4 )
+      v3 = v4;
+  }
+  *(_QWORD *)v3 = 1102416563LL;
+  *(_QWORD *)(v3 + 8) = "1 32 4 7 __i:242";
+  *(_QWORD *)(v3 + 16) = std::atomic<common::minet::AClientMgr<GameserverConnect>::Status>::store;
+  v5 = v3 >> 3;
+  *(_DWORD *)(v5 + 2147450880) = -235802127;
+  *(_DWORD *)(v5 + 2147450884) = -202116348;
+  *(_DWORD *)(v3 + 32) = __i;
+  v6 = std::__addressof<common::minet::AClientMgr<GameserverConnect>::Status>((common::minet::AClientMgr<GameserverConnect>::Status *)(v3 + 32));
+  v7 = (int *)v6;
+  if ( *(_BYTE *)(((unsigned __int64)v6 >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)v6 & 7) + 3) >= *(_BYTE *)(((unsigned __int64)v6 >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_load4(v6);
+  }
+  v8 = *v7;
+  v9 = std::__addressof<common::minet::AClientMgr<GameserverConnect>::Status>(&this->_M_i);
+  v10 = v9;
+  if ( *(_BYTE *)(((unsigned __int64)v9 >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)v9 & 7) + 3) >= *(_BYTE *)(((unsigned __int64)v9 >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store4(v9);
+  }
+  *v10 = v8;
+  _mm_mfence();
+  if ( v11 == (char *)v3 )
+  {
+    *(_QWORD *)((v3 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v3 = 1172321806LL;
+    *(_QWORD *)((v3 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 242: range 000000000C7E3C1A-000000000C7E3D6C
+void __fastcall std::atomic<common::minet::AClientMgr<PathfindingserverConnect>::Status>::store(
+        std::atomic<common::minet::AClientMgr<PathfindingserverConnect>::Status> *const this,
+        common::minet::AClientMgr<PathfindingserverConnect>::Status __i,
+        std::memory_order_0 __m)
+{
+  unsigned __int64 v3; // rbx
+  __int64 v4; // rax
+  unsigned __int64 v5; // r12
+  common::minet::AClientMgr<PathfindingserverConnect>::Status *v6; // rax
+  int *v7; // rdx
+  int v8; // r13d
+  common::minet::AClientMgr<PathfindingserverConnect>::Status *v9; // rax
+  _DWORD *v10; // rdx
+  char v11[96]; // [rsp+10h] [rbp-60h] BYREF
+
+  v3 = (unsigned __int64)v11;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v4 = __asan_stack_malloc_0(64LL);
+    if ( v4 )
+      v3 = v4;
+  }
+  *(_QWORD *)v3 = 1102416563LL;
+  *(_QWORD *)(v3 + 8) = "1 32 4 7 __i:242";
+  *(_QWORD *)(v3 + 16) = std::atomic<common::minet::AClientMgr<PathfindingserverConnect>::Status>::store;
+  v5 = v3 >> 3;
+  *(_DWORD *)(v5 + 2147450880) = -235802127;
+  *(_DWORD *)(v5 + 2147450884) = -202116348;
+  *(_DWORD *)(v3 + 32) = __i;
+  v6 = std::__addressof<common::minet::AClientMgr<PathfindingserverConnect>::Status>((common::minet::AClientMgr<PathfindingserverConnect>::Status *)(v3 + 32));
+  v7 = (int *)v6;
+  if ( *(_BYTE *)(((unsigned __int64)v6 >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)v6 & 7) + 3) >= *(_BYTE *)(((unsigned __int64)v6 >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_load4(v6);
+  }
+  v8 = *v7;
+  v9 = std::__addressof<common::minet::AClientMgr<PathfindingserverConnect>::Status>(&this->_M_i);
+  v10 = v9;
+  if ( *(_BYTE *)(((unsigned __int64)v9 >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)v9 & 7) + 3) >= *(_BYTE *)(((unsigned __int64)v9 >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store4(v9);
+  }
+  *v10 = v8;
+  _mm_mfence();
+  if ( v11 == (char *)v3 )
+  {
+    *(_QWORD *)((v3 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v3 = 1172321806LL;
+    *(_QWORD *)((v3 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 242: range 000000000C7E4400-000000000C7E4552
+void __fastcall std::atomic<common::minet::AClientMgr<TothemoonserverConnect>::Status>::store(
+        std::atomic<common::minet::AClientMgr<TothemoonserverConnect>::Status> *const this,
+        common::minet::AClientMgr<TothemoonserverConnect>::Status __i,
+        std::memory_order_0 __m)
+{
+  unsigned __int64 v3; // rbx
+  __int64 v4; // rax
+  unsigned __int64 v5; // r12
+  common::minet::AClientMgr<TothemoonserverConnect>::Status *v6; // rax
+  int *v7; // rdx
+  int v8; // r13d
+  common::minet::AClientMgr<TothemoonserverConnect>::Status *v9; // rax
+  _DWORD *v10; // rdx
+  char v11[96]; // [rsp+10h] [rbp-60h] BYREF
+
+  v3 = (unsigned __int64)v11;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v4 = __asan_stack_malloc_0(64LL);
+    if ( v4 )
+      v3 = v4;
+  }
+  *(_QWORD *)v3 = 1102416563LL;
+  *(_QWORD *)(v3 + 8) = "1 32 4 7 __i:242";
+  *(_QWORD *)(v3 + 16) = std::atomic<common::minet::AClientMgr<TothemoonserverConnect>::Status>::store;
+  v5 = v3 >> 3;
+  *(_DWORD *)(v5 + 2147450880) = -235802127;
+  *(_DWORD *)(v5 + 2147450884) = -202116348;
+  *(_DWORD *)(v3 + 32) = __i;
+  v6 = std::__addressof<common::minet::AClientMgr<TothemoonserverConnect>::Status>((common::minet::AClientMgr<TothemoonserverConnect>::Status *)(v3 + 32));
+  v7 = (int *)v6;
+  if ( *(_BYTE *)(((unsigned __int64)v6 >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)v6 & 7) + 3) >= *(_BYTE *)(((unsigned __int64)v6 >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_load4(v6);
+  }
+  v8 = *v7;
+  v9 = std::__addressof<common::minet::AClientMgr<TothemoonserverConnect>::Status>(&this->_M_i);
+  v10 = v9;
+  if ( *(_BYTE *)(((unsigned __int64)v9 >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)v9 & 7) + 3) >= *(_BYTE *)(((unsigned __int64)v9 >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store4(v9);
+  }
+  *v10 = v8;
+  _mm_mfence();
+  if ( v11 == (char *)v3 )
+  {
+    *(_QWORD *)((v3 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v3 = 1172321806LL;
+    *(_QWORD *)((v3 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+};
+
+// Line 250: range 000000000C7C7D36-000000000C7C7E7C
+ServiceBase::Status __cdecl std::atomic<ServiceBase::Status>::load(
+        const std::atomic<ServiceBase::Status> *const this,
+        std::memory_order_0 __m)
+{
+  unsigned __int64 v2; // rbx
+  __int64 v3; // rax
+  unsigned __int64 v4; // r12
+  ServiceBase::Status *v5; // rax
+  ServiceBase::Status *v6; // rdx
+  ServiceBase::Status v7; // ecx
+  ServiceBase::Status result; // eax
+  ServiceBase::Status *__ptr; // [rsp+18h] [rbp-68h]
+  char v10[96]; // [rsp+20h] [rbp-60h] BYREF
+
+  v2 = (unsigned __int64)v10;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v3 = __asan_stack_malloc_0(64LL);
+    if ( v3 )
+      v2 = v3;
+  }
+  *(_QWORD *)v2 = 1102416563LL;
+  *(_QWORD *)(v2 + 8) = "1 32 4 9 __buf:252";
+  *(_QWORD *)(v2 + 16) = std::atomic<ServiceBase::Status>::load;
+  v4 = v2 >> 3;
+  *(_DWORD *)(v4 + 2147450880) = -235802127;
+  *(_DWORD *)(v4 + 2147450884) = -202116348;
+  __ptr = (ServiceBase::Status *)(v2 + 32);
+  v5 = (ServiceBase::Status *)std::__addressof<ServiceBase::Status const>(&this->_M_i);
+  v6 = v5;
+  if ( *(_BYTE *)(((unsigned __int64)v5 >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)v5 & 7) + 3) >= *(_BYTE *)(((unsigned __int64)v5 >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_load4(v5);
+  }
+  v7 = *v6;
+  if ( *(_BYTE *)(((unsigned __int64)__ptr >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)__ptr & 7) + 3) >= *(_BYTE *)(((unsigned __int64)__ptr >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store4(__ptr);
+  }
+  *__ptr = v7;
+  result = *__ptr;
+  if ( v10 == (char *)v2 )
+  {
+    *(_QWORD *)((v2 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v2 = 1172321806LL;
+    *(_QWORD *)((v2 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+  return result;
+};
+
+// Line 250: range 000000000C86D124-000000000C86D26A
+common::minet::AClientMgr<DispatchConnect>::Status __cdecl std::atomic<common::minet::AClientMgr<DispatchConnect>::Status>::load(
+        const std::atomic<common::minet::AClientMgr<DispatchConnect>::Status> *const this,
+        std::memory_order_0 __m)
+{
+  unsigned __int64 v2; // rbx
+  __int64 v3; // rax
+  unsigned __int64 v4; // r12
+  common::minet::AClientMgr<DispatchConnect>::Status *v5; // rax
+  common::minet::AClientMgr<DispatchConnect>::Status *v6; // rdx
+  common::minet::AClientMgr<DispatchConnect>::Status v7; // ecx
+  common::minet::AClientMgr<DispatchConnect>::Status result; // eax
+  common::minet::AClientMgr<DispatchConnect>::Status *__ptr; // [rsp+18h] [rbp-68h]
+  char v10[96]; // [rsp+20h] [rbp-60h] BYREF
+
+  v2 = (unsigned __int64)v10;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v3 = __asan_stack_malloc_0(64LL);
+    if ( v3 )
+      v2 = v3;
+  }
+  *(_QWORD *)v2 = 1102416563LL;
+  *(_QWORD *)(v2 + 8) = "1 32 4 9 __buf:252";
+  *(_QWORD *)(v2 + 16) = std::atomic<common::minet::AClientMgr<DispatchConnect>::Status>::load;
+  v4 = v2 >> 3;
+  *(_DWORD *)(v4 + 2147450880) = -235802127;
+  *(_DWORD *)(v4 + 2147450884) = -202116348;
+  __ptr = (common::minet::AClientMgr<DispatchConnect>::Status *)(v2 + 32);
+  v5 = (common::minet::AClientMgr<DispatchConnect>::Status *)std::__addressof<common::minet::AClientMgr<DispatchConnect>::Status const>(&this->_M_i);
+  v6 = v5;
+  if ( *(_BYTE *)(((unsigned __int64)v5 >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)v5 & 7) + 3) >= *(_BYTE *)(((unsigned __int64)v5 >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_load4(v5);
+  }
+  v7 = *v6;
+  if ( *(_BYTE *)(((unsigned __int64)__ptr >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)__ptr & 7) + 3) >= *(_BYTE *)(((unsigned __int64)__ptr >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store4(__ptr);
+  }
+  *__ptr = v7;
+  result = *__ptr;
+  if ( v10 == (char *)v2 )
+  {
+    *(_QWORD *)((v2 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v2 = 1172321806LL;
+    *(_QWORD *)((v2 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+  return result;
+};
+
+// Line 250: range 000000000C7E2C4C-000000000C7E2D92
+common::minet::AClientMgr<GameserverConnect>::Status __cdecl std::atomic<common::minet::AClientMgr<GameserverConnect>::Status>::load(
+        const std::atomic<common::minet::AClientMgr<GameserverConnect>::Status> *const this,
+        std::memory_order_0 __m)
+{
+  unsigned __int64 v2; // rbx
+  __int64 v3; // rax
+  unsigned __int64 v4; // r12
+  common::minet::AClientMgr<GameserverConnect>::Status *v5; // rax
+  common::minet::AClientMgr<GameserverConnect>::Status *v6; // rdx
+  common::minet::AClientMgr<GameserverConnect>::Status v7; // ecx
+  common::minet::AClientMgr<GameserverConnect>::Status result; // eax
+  common::minet::AClientMgr<GameserverConnect>::Status *__ptr; // [rsp+18h] [rbp-68h]
+  char v10[96]; // [rsp+20h] [rbp-60h] BYREF
+
+  v2 = (unsigned __int64)v10;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v3 = __asan_stack_malloc_0(64LL);
+    if ( v3 )
+      v2 = v3;
+  }
+  *(_QWORD *)v2 = 1102416563LL;
+  *(_QWORD *)(v2 + 8) = "1 32 4 9 __buf:252";
+  *(_QWORD *)(v2 + 16) = std::atomic<common::minet::AClientMgr<GameserverConnect>::Status>::load;
+  v4 = v2 >> 3;
+  *(_DWORD *)(v4 + 2147450880) = -235802127;
+  *(_DWORD *)(v4 + 2147450884) = -202116348;
+  __ptr = (common::minet::AClientMgr<GameserverConnect>::Status *)(v2 + 32);
+  v5 = (common::minet::AClientMgr<GameserverConnect>::Status *)std::__addressof<common::minet::AClientMgr<GameserverConnect>::Status const>(&this->_M_i);
+  v6 = v5;
+  if ( *(_BYTE *)(((unsigned __int64)v5 >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)v5 & 7) + 3) >= *(_BYTE *)(((unsigned __int64)v5 >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_load4(v5);
+  }
+  v7 = *v6;
+  if ( *(_BYTE *)(((unsigned __int64)__ptr >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)__ptr & 7) + 3) >= *(_BYTE *)(((unsigned __int64)__ptr >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store4(__ptr);
+  }
+  *__ptr = v7;
+  result = *__ptr;
+  if ( v10 == (char *)v2 )
+  {
+    *(_QWORD *)((v2 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v2 = 1172321806LL;
+    *(_QWORD *)((v2 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+  return result;
+};
+
+// Line 250: range 000000000C7E35BE-000000000C7E3704
+common::minet::AClientMgr<PathfindingserverConnect>::Status __cdecl std::atomic<common::minet::AClientMgr<PathfindingserverConnect>::Status>::load(
+        const std::atomic<common::minet::AClientMgr<PathfindingserverConnect>::Status> *const this,
+        std::memory_order_0 __m)
+{
+  unsigned __int64 v2; // rbx
+  __int64 v3; // rax
+  unsigned __int64 v4; // r12
+  common::minet::AClientMgr<PathfindingserverConnect>::Status *v5; // rax
+  common::minet::AClientMgr<PathfindingserverConnect>::Status *v6; // rdx
+  common::minet::AClientMgr<PathfindingserverConnect>::Status v7; // ecx
+  common::minet::AClientMgr<PathfindingserverConnect>::Status result; // eax
+  common::minet::AClientMgr<PathfindingserverConnect>::Status *__ptr; // [rsp+18h] [rbp-68h]
+  char v10[96]; // [rsp+20h] [rbp-60h] BYREF
+
+  v2 = (unsigned __int64)v10;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v3 = __asan_stack_malloc_0(64LL);
+    if ( v3 )
+      v2 = v3;
+  }
+  *(_QWORD *)v2 = 1102416563LL;
+  *(_QWORD *)(v2 + 8) = "1 32 4 9 __buf:252";
+  *(_QWORD *)(v2 + 16) = std::atomic<common::minet::AClientMgr<PathfindingserverConnect>::Status>::load;
+  v4 = v2 >> 3;
+  *(_DWORD *)(v4 + 2147450880) = -235802127;
+  *(_DWORD *)(v4 + 2147450884) = -202116348;
+  __ptr = (common::minet::AClientMgr<PathfindingserverConnect>::Status *)(v2 + 32);
+  v5 = (common::minet::AClientMgr<PathfindingserverConnect>::Status *)std::__addressof<common::minet::AClientMgr<PathfindingserverConnect>::Status const>(&this->_M_i);
+  v6 = v5;
+  if ( *(_BYTE *)(((unsigned __int64)v5 >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)v5 & 7) + 3) >= *(_BYTE *)(((unsigned __int64)v5 >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_load4(v5);
+  }
+  v7 = *v6;
+  if ( *(_BYTE *)(((unsigned __int64)__ptr >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)__ptr & 7) + 3) >= *(_BYTE *)(((unsigned __int64)__ptr >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store4(__ptr);
+  }
+  *__ptr = v7;
+  result = *__ptr;
+  if ( v10 == (char *)v2 )
+  {
+    *(_QWORD *)((v2 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v2 = 1172321806LL;
+    *(_QWORD *)((v2 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+  return result;
+};
+
+// Line 250: range 000000000C7E3DA4-000000000C7E3EEA
+common::minet::AClientMgr<TothemoonserverConnect>::Status __cdecl std::atomic<common::minet::AClientMgr<TothemoonserverConnect>::Status>::load(
+        const std::atomic<common::minet::AClientMgr<TothemoonserverConnect>::Status> *const this,
+        std::memory_order_0 __m)
+{
+  unsigned __int64 v2; // rbx
+  __int64 v3; // rax
+  unsigned __int64 v4; // r12
+  common::minet::AClientMgr<TothemoonserverConnect>::Status *v5; // rax
+  common::minet::AClientMgr<TothemoonserverConnect>::Status *v6; // rdx
+  common::minet::AClientMgr<TothemoonserverConnect>::Status v7; // ecx
+  common::minet::AClientMgr<TothemoonserverConnect>::Status result; // eax
+  common::minet::AClientMgr<TothemoonserverConnect>::Status *__ptr; // [rsp+18h] [rbp-68h]
+  char v10[96]; // [rsp+20h] [rbp-60h] BYREF
+
+  v2 = (unsigned __int64)v10;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v3 = __asan_stack_malloc_0(64LL);
+    if ( v3 )
+      v2 = v3;
+  }
+  *(_QWORD *)v2 = 1102416563LL;
+  *(_QWORD *)(v2 + 8) = "1 32 4 9 __buf:252";
+  *(_QWORD *)(v2 + 16) = std::atomic<common::minet::AClientMgr<TothemoonserverConnect>::Status>::load;
+  v4 = v2 >> 3;
+  *(_DWORD *)(v4 + 2147450880) = -235802127;
+  *(_DWORD *)(v4 + 2147450884) = -202116348;
+  __ptr = (common::minet::AClientMgr<TothemoonserverConnect>::Status *)(v2 + 32);
+  v5 = (common::minet::AClientMgr<TothemoonserverConnect>::Status *)std::__addressof<common::minet::AClientMgr<TothemoonserverConnect>::Status const>(&this->_M_i);
+  v6 = v5;
+  if ( *(_BYTE *)(((unsigned __int64)v5 >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)v5 & 7) + 3) >= *(_BYTE *)(((unsigned __int64)v5 >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_load4(v5);
+  }
+  v7 = *v6;
+  if ( *(_BYTE *)(((unsigned __int64)__ptr >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)__ptr & 7) + 3) >= *(_BYTE *)(((unsigned __int64)__ptr >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store4(__ptr);
+  }
+  *__ptr = v7;
+  result = *__ptr;
+  if ( v10 == (char *)v2 )
+  {
+    *(_QWORD *)((v2 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v2 = 1172321806LL;
+    *(_QWORD *)((v2 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+  return result;
+};
+
+// Line 254: range 000000001537C6D0-000000001537C7DC
+bool __fastcall ServiceBase::isRunByStatus(ServiceBase *const this)
+{
+  char v1; // cl
+
+  v1 = *(_BYTE *)(((unsigned __int64)&this->status_ >> 3) + 0x7FFF8000);
+  if ( (char)((((_BYTE)this + 52) & 7) + 3) >= v1 && v1 )
+  {
+    __asan_report_load4(&this->status_);
+    JUMPOUT(0x1537C709LL);
+  }
+  return this->status_._M_i == STATUS_RUN;
+};
+
+// Line 759: range 000000000C7900BC-000000000C7900DE
+void __cdecl std::atomic<int>::atomic(std::atomic<int> *const this, std::atomic<int>::__integral_type __i)
+{
+  std::__atomic_base<int>::__atomic_base(this, __i);
+};
+
+// Line 782: range 000000000C7900E0-000000000C790102
+void __cdecl std::atomic<unsigned int>::atomic(
+        std::atomic<unsigned int> *const this,
+        std::atomic<unsigned int>::__integral_type __i)
+{
+  std::__atomic_base<unsigned int>::__atomic_base(this, __i);
+};
+
+// Line 805: range 000000000C790104-000000000C790129
+void __cdecl std::atomic<long>::atomic(std::atomic<long int> *const this, std::atomic<long int>::__integral_type __i)
+{
+  std::__atomic_base<long>::__atomic_base(this, __i);
+};
+
+// Line 828: range 000000000C79012A-000000000C79014F
+void __cdecl std::atomic<unsigned long>::atomic(
+        std::atomic<long unsigned int> *const this,
+        std::atomic<long unsigned int>::__integral_type __i)
+{
+  std::__atomic_base<unsigned long>::__atomic_base(this, __i);
+};
+
+// Line 846: range 000000000C7CAC4E-000000000C7CAD94
+common::minet::AClientConnect::Status __cdecl std::atomic<common::minet::AClientConnect::Status>::load(
+        const std::atomic<common::minet::AClientConnect::Status> *const this,
+        std::memory_order_0 __m)
+{
+  unsigned __int64 v2; // rbx
+  __int64 v3; // rax
+  unsigned __int64 v4; // r12
+  common::minet::AClientConnect::Status *v5; // rax
+  common::minet::AClientConnect::Status *v6; // rdx
+  common::minet::AClientConnect::Status v7; // ecx
+  common::minet::AClientConnect::Status result; // eax
+  common::minet::AClientConnect::Status *__ptr; // [rsp+18h] [rbp-68h]
+  char v10[96]; // [rsp+20h] [rbp-60h] BYREF
+
+  v2 = (unsigned __int64)v10;
+  if ( _asan_option_detect_stack_use_after_return )
+  {
+    v3 = __asan_stack_malloc_0(64LL);
+    if ( v3 )
+      v2 = v3;
+  }
+  *(_QWORD *)v2 = 1102416563LL;
+  *(_QWORD *)(v2 + 8) = "1 32 4 9 __buf:252";
+  *(_QWORD *)(v2 + 16) = std::atomic<common::minet::AClientConnect::Status>::load;
+  v4 = v2 >> 3;
+  *(_DWORD *)(v4 + 2147450880) = -235802127;
+  *(_DWORD *)(v4 + 2147450884) = -202116348;
+  __ptr = (common::minet::AClientConnect::Status *)(v2 + 32);
+  v5 = (common::minet::AClientConnect::Status *)std::__addressof<common::minet::AClientConnect::Status const>(&this->_M_i);
+  v6 = v5;
+  if ( *(_BYTE *)(((unsigned __int64)v5 >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)v5 & 7) + 3) >= *(_BYTE *)(((unsigned __int64)v5 >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_load4(v5);
+  }
+  v7 = *v6;
+  if ( *(_BYTE *)(((unsigned __int64)__ptr >> 3) + 0x7FFF8000) != 0
+    && (char)(((unsigned __int8)__ptr & 7) + 3) >= *(_BYTE *)(((unsigned __int64)__ptr >> 3) + 0x7FFF8000) )
+  {
+    __asan_report_store4(__ptr);
+  }
+  *__ptr = v7;
+  result = *__ptr;
+  if ( v10 == (char *)v2 )
+  {
+    *(_QWORD *)((v2 >> 3) + 0x7FFF8000) = 0LL;
+  }
+  else
+  {
+    *(_QWORD *)v2 = 1172321806LL;
+    *(_QWORD *)((v2 >> 3) + 0x7FFF8000) = 0xF5F5F5F5F5F5F5F5LL;
+  }
+  return result;
+};

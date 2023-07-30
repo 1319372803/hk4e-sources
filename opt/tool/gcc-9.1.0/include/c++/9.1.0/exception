@@ -1,0 +1,25 @@
+// File: /opt/tool/gcc-9.1.0/include/c++/9.1.0/exception
+
+// Line 46: range 000000000C663370-000000000C6633C8
+void __cdecl std::bad_exception::bad_exception(std::bad_exception *const this, const std::bad_exception *a2)
+{
+  char *v2; // rdx
+
+  std::exception::exception(this, a2);
+  v2 = (char *)&`vtable for'std::bad_exception + 16;
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+    __asan_report_store8();
+  *(_QWORD *)this = v2;
+};
+
+// Line 63: range 000000000C634600-000000000C63464D
+void __cdecl std::bad_exception::bad_exception(std::bad_exception *const this)
+{
+  char *v1; // rdx
+
+  std::exception::exception(this);
+  v1 = (char *)&`vtable for'std::bad_exception + 16;
+  if ( *(_BYTE *)(((unsigned __int64)this >> 3) + 0x7FFF8000) )
+    __asan_report_store8();
+  *(_QWORD *)this = v1;
+};

@@ -1,0 +1,114 @@
+// File: /opt/tool/gcc-9.1.0/include/c++/9.1.0/cmath
+
+// Line 107: range 000000000CDFCC5B-000000000CDFCC75
+float __cdecl std::asin(float __x)
+{
+  return asinf(__x);
+};
+
+// Line 109: range 000000000CDFCC40-000000000CDFCC5A
+float __cdecl std::acos(float __x)
+{
+  return acosf(__x);
+};
+
+// Line 145: range 000000000CDFCC76-000000000CDFCC9D
+float __cdecl std::atan2(float __y, float __x)
+{
+  return atan2f(__y, __x);
+};
+
+// Line 166: range 0000000012EAAD3A-0000000012EAAD8F
+float __cdecl std::ceil(float __x)
+{
+  __m128 v1; // xmm1
+
+  if ( fabs(__x) < 8388608.0 )
+  {
+    v1.m128_f32[0] = (float)(int)__x;
+    LODWORD(__x) = COERCE_UNSIGNED_INT(COERCE_FLOAT(_mm_cmpgt_ss((__m128)LODWORD(__x), v1).m128_u32[0] & 0x3F800000) + v1.m128_f32[0]) | _mm_andnot_ps((__m128)0x7FFFFFFFu, (__m128)LODWORD(__x)).m128_u32[0];
+  }
+  return __x;
+};
+
+// Line 177: range 000000000CED26E3-000000000CED270F
+__gnu_cxx::__enable_if<true,double>::__type __cdecl std::ceil<unsigned int>(unsigned int __x)
+{
+  return (double)(int)__x;
+};
+
+// Line 185: range 000000000CDFCC9E-000000000CDFCCB8
+float __cdecl std::cos(float __x)
+{
+  return cosf(__x);
+};
+
+// Line 242: range 000000000CDFCCB9-000000000CDFCCD3
+float __cdecl std::fabs(float __x)
+{
+  return fabs(__x);
+};
+
+// Line 280: range 000000000CDFCCD4-000000000CDFCCFB
+float __cdecl std::fmod(float __x, float __y)
+{
+  return fmodf(__x, __y);
+};
+
+// Line 415: range 000000000CE3BF61-000000000CE3BF81
+__gnu_cxx::__promote_2<float,int,float,double>::__type __cdecl std::pow<float,int>(float __x, int __y)
+{
+  return pow(__x, (double)__y);
+};
+
+// Line 426: range 000000000CDFCCFC-000000000CDFCD16
+float __cdecl std::sin(float __x)
+{
+  return sinf(__x);
+};
+
+// Line 464: range 000000000CDFCD17-000000000CDFCD31
+float __cdecl std::sqrt(float __x)
+{
+  return sqrtf(__x);
+};
+
+// Line 563: range 000000000CDFCD32-000000000CDFCD65
+bool __cdecl std::isfinite(float __x)
+{
+  return fabs(__x) <= 3.4028235e38;
+};
+
+// Line 563: range 000000000CDFCD66-000000000CDFCD95
+bool __cdecl std::isinf(float __x)
+{
+  return fabs(__x) > 3.4028235e38;
+};
+
+// Line 585: range 000000000C7E5310-000000000C7E5351
+std::string *__fastcall google::protobuf::util::converter::FloatAsString[abi:cxx11](std::string *this, float a2)
+{
+  if ( fabs(a2) > 3.4028235e38 )
+    google::protobuf::util::converter::DoubleAsString[abi:cxx11](this);
+  else
+    google::protobuf::SimpleFtoa[abi:cxx11](this);
+  return this;
+};
+
+// Line 612: range 000000000CDFCD96-000000000CDFCDB4
+bool __cdecl std::isnan(float __x)
+{
+  return 0LL;
+};
+
+// Line 1661: range 000000000CDFCDB5-000000000CDFCDDC
+float __cdecl std::nextafter(float __x, float __y)
+{
+  return nextafterf(__x, __y);
+};
+
+// Line 1661: range 000000000CDFCDDD-000000000CDFCDF7
+float __cdecl std::round(float __x)
+{
+  return roundf(__x);
+};

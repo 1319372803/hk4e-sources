@@ -1,0 +1,61 @@
+// File: /opt/tool/gcc-9.1.0/include/c++/9.1.0/limits
+
+// Line 190: range 000000000CDF8BE8-000000000CDF8BF2
+int __cdecl std::numeric_limits<int>::max()
+{
+  return 0x7FFFFFFF;
+};
+
+// Line 1065: range 000000000F7755A8-000000000F7755B2
+int __cdecl std::numeric_limits<int>::min()
+{
+  return 0x80000000;
+};
+
+// Line 1132: range 000000000C634A7D-000000000C634A87
+unsigned int __cdecl std::numeric_limits<unsigned int>::min()
+{
+  return 0;
+};
+
+// Line 1135: range 000000000C634A93-000000000C634AA2
+__int64 __cdecl std::numeric_limits<long>::min()
+{
+  return 0x8000000000000000LL;
+};
+
+// Line 1135: range 000000000C634A88-000000000C634A92
+unsigned int __cdecl std::numeric_limits<unsigned int>::max()
+{
+  return -1;
+};
+
+// Line 1139: range 000000000CDF8BFE-000000000CDF8C0B
+float __cdecl std::numeric_limits<float>::max()
+{
+  return 3.4028235e38;
+};
+
+// Line 1139: range 000000000CDF8BF3-000000000CDF8BFD
+unsigned int __cdecl std::numeric_limits<unsigned int>::lowest()
+{
+  return std::numeric_limits<unsigned int>::min();
+};
+
+// Line 1207: range 000000000C634AA3-000000000C634AB2
+__int64 __cdecl std::numeric_limits<long>::max()
+{
+  return 0x7FFFFFFFFFFFFFFFLL;
+};
+
+// Line 1274: range 000000000C634AB3-000000000C634ABF
+unsigned __int64 __cdecl std::numeric_limits<unsigned long>::max()
+{
+  return -1LL;
+};
+
+// Line 1665: range 000000000F7755B3-000000000F7755C0
+float __cdecl std::numeric_limits<float>::min()
+{
+  return 1.1754944e-38;
+};
